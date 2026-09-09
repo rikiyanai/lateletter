@@ -91,8 +91,6 @@ Demo link once deployed: https://rikiworld.com/lateletter/to-a-friend/ (passcode
 viewer. That deployed version is kept as a rollback-safe release:
 [`lateletter-legacy-pages-2026-07-28`](https://github.com/rikiyanai/lateletter/releases/tag/lateletter-legacy-pages-2026-07-28).
 
-The newer root viewer work lives on `main`, but the public site should remain on
-the legacy viewer until an intentional release replaces it.
 
 ## Project structure
 
