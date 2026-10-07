@@ -1,0 +1,101 @@
+[
+  {
+    "surface_id": "A_2026-04-20_dumpster_viewer",
+    "description": "Oldest preserved browser viewer (dumpster/cleanup-2026-04-20/viewer.html)",
+    "steps_performed": [
+      "goto /dumpster/cleanup-2026-04-20/viewer.html",
+      "shot A_2026-04-20_dumpster_viewer__A1_welcome.png"
+    ],
+    "console_errors": []
+  },
+  {
+    "surface_id": "B_7b9389d_legacy_viewer_only",
+    "description": "Legacy orphan-snapshot viewer preserved WITHOUT companion files",
+    "steps_performed": [
+      "goto /archive/legacy-garden-7b9389d/viewer-bnw.html",
+      "shot B_7b9389d_legacy_viewer_only__B1_welcome.png",
+      "click #btn-demo -> OK",
+      "shot B_7b9389d_legacy_viewer_only__B2_after_get_demo_letter.png"
+    ],
+    "console_errors": [
+      "error: Failed to load resource: the server responded with a status of 404 (File not found)"
+    ]
+  },
+  {
+    "surface_id": "C_7b9389d_legacy_repo_runnable",
+    "description": "Legacy orphan snapshot as a whole runnable sanitized repository",
+    "steps_performed": [
+      "goto /archive/legacy-repo-7b9389d/viewer-bnw.html",
+      "shot C_7b9389d_legacy_repo_runnable__C1_welcome.png",
+      "click #btn-demo -> OK",
+      "shot C_7b9389d_legacy_repo_runnable__C2_demo_letter_garden.png",
+      "goto /archive/legacy-repo-7b9389d/viewer-bnw.html",
+      "click #btn-demo-sealed -> OK",
+      "shot C_7b9389d_legacy_repo_runnable__C3a_sealed_garden_before_unlock.png",
+      "click_text 'open letters' -> OK",
+      "shot C_7b9389d_legacy_repo_runnable__C3b_sealed_passphrase_prompt.png",
+      "passphrase 'garden-biscuit-2026' -> rejected",
+      "passphrase 'garden' -> UNLOCKED",
+      "shot C_7b9389d_legacy_repo_runnable__C4_sealed_after_unlock.png",
+      "click #btn-all -> SKIPPED (present-but-hidden)",
+      "shot C_7b9389d_legacy_repo_runnable__C5_letter_archive.png"
+    ],
+    "console_errors": [
+      "warning: [viewer] dev fixture missing checksum; corruption gate relaxed for local demo flow"
+    ]
+  },
+  {
+    "surface_id": "D_526ab9e_deleted_browser_garden",
+    "description": "The browser Garden package deleted by 520f27b, preserved at its parent",
+    "steps_performed": [
+      "goto /archive/deleted-browser-garden-526ab9e/viewer-bnw.html",
+      "shot D_526ab9e_deleted_browser_garden__D1_welcome.png",
+      "click #btn-standalone -> OK",
+      "shot D_526ab9e_deleted_browser_garden__D2_standalone_garden_with_action_drawer.png",
+      "goto /archive/deleted-browser-garden-526ab9e/viewer-bnw.html",
+      "click #btn-demo -> OK",
+      "shot D_526ab9e_deleted_browser_garden__D3_demo_letter_garden.png",
+      "goto /archive/deleted-browser-garden-526ab9e/viewer-bnw.html",
+      "click #btn-demo-sealed -> OK",
+      "click_text 'open letters' -> OK",
+      "passphrase 'garden-biscuit-2026' -> rejected",
+      "passphrase 'garden' -> UNLOCKED",
+      "shot D_526ab9e_deleted_browser_garden__D4_sealed_after_unlock.png"
+    ],
+    "console_errors": [
+      "warning: [viewer] dev fixture missing checksum; corruption gate relaxed for local demo flow"
+    ]
+  },
+  {
+    "surface_id": "E_current_live_viewer",
+    "description": "Current working-tree viewer-bnw.html (the shipping product surface)",
+    "steps_performed": [
+      "goto /viewer-bnw.html",
+      "shot E_current_live_viewer__E1_welcome.png",
+      "click #btn-standalone -> OK",
+      "shot E_current_live_viewer__E2_standalone_garden_default.png",
+      "goto /viewer-bnw.html",
+      "click #btn-demo-sealed -> OK",
+      "click_text 'open letters' -> OK",
+      "shot E_current_live_viewer__E3a_sealed_passphrase_prompt.png",
+      "passphrase 'garden-biscuit-2026' -> UNLOCKED",
+      "shot E_current_live_viewer__E3b_sealed_after_unlock.png",
+      "shot E_current_live_viewer__E4_letter_archive_listing.png",
+      "click_text 'July 21, 2026' -> OK",
+      "shot E_current_live_viewer__E5_letter_body_reading_surface.png"
+    ],
+    "console_errors": []
+  },
+  {
+    "surface_id": "F_current_live_viewer_garden_debug",
+    "description": "Current viewer with ?garden_debug=1 -- the panel mistaken for an editor",
+    "steps_performed": [
+      "goto /viewer-bnw.html?garden_debug=1",
+      "click #btn-standalone -> OK",
+      "shot F_current_live_viewer_garden_debug__F1_standalone_with_diagnostics_button.png",
+      "click #garden-controls-open -> OK",
+      "shot F_current_live_viewer_garden_debug__F2_garden_diagnostic_panel_open.png"
+    ],
+    "console_errors": []
+  }
+]

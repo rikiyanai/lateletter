@@ -1,0 +1,1136 @@
+<title>Fixture art worksheet &mdash; LateLetter Garden</title>
+<style>
+  /* ---------------------------------------------------------------------
+     Palette taken from the Garden's own daylight colours in
+     garden-renderer.mjs, so the worksheet sits in the product's world
+     rather than a generic document theme. Neutrals carry a slight leaf
+     bias so they read as chosen rather than inherited.
+     --------------------------------------------------------------------- */
+  :root {
+    --paper:  #F2F4EF;
+    --panel:  #E9ECE3;
+    --ink:    #161A15;
+    --muted:  #656B5F;
+    --rule:   #D3D9CB;
+    --leaf:   #436C2D;
+    --water:  #416F8F;
+    --clay:   #9E367F;
+    --shadow: rgba(22, 26, 21, 0.07);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:  #121410;
+      --panel:  #1B1E18;
+      --ink:    #E4E7DC;
+      --muted:  #8D9484;
+      --rule:   #2C312A;
+      --leaf:   #8CB86A;
+      --water:  #7FAECB;
+      --clay:   #D083B6;
+      --shadow: rgba(0, 0, 0, 0.4);
+    }
+  }
+  /* The viewer's own toggle stamps data-theme on the root and must win over
+     the media query in BOTH directions, not just into dark. */
+  :root[data-theme="dark"] {
+    --paper:  #121410; --panel: #1B1E18; --ink: #E4E7DC; --muted: #8D9484;
+    --rule:   #2C312A; --leaf:  #8CB86A; --water: #7FAECB; --clay: #D083B6;
+    --shadow: rgba(0, 0, 0, 0.4);
+  }
+  :root[data-theme="light"] {
+    --paper:  #F2F4EF; --panel: #E9ECE3; --ink: #161A15; --muted: #656B5F;
+    --rule:   #D3D9CB; --leaf:  #436C2D; --water: #416F8F; --clay: #9E367F;
+    --shadow: rgba(22, 26, 21, 0.07);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 66rem; margin: 0 auto; padding: 0 1.5rem 3rem; }
+
+  /* Header ------------------------------------------------------------- */
+  header { padding: 4rem 0 2rem; border-bottom: 2px solid var(--ink); }
+  .kicker {
+    margin: 0 0 0.75rem;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.6875rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--leaf);
+  }
+  h1 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.1; font-weight: 620; letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  .standfirst { margin: 0; max-width: 42rem; color: var(--muted); }
+
+  /* Specimens ----------------------------------------------------------- */
+  .sheet { display: flex; flex-direction: column; }
+
+  .specimen {
+    display: grid;
+    grid-template-columns: 13rem minmax(0, 1fr) 15rem;
+    gap: 1.75rem;
+    align-items: start;
+    padding: 2.25rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .specimen[data-state="keep"]   { box-shadow: inset 3px 0 0 var(--leaf); padding-left: 1rem; }
+  .specimen[data-state="redraw"] { box-shadow: inset 3px 0 0 var(--clay); padding-left: 1rem; }
+
+  .eyebrow {
+    margin: 0 0 0.25rem;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.6875rem; letter-spacing: 0.08em; color: var(--muted);
+  }
+  .meta h2 { margin: 0 0 0.5rem; font-size: 1.1875rem; font-weight: 600; letter-spacing: -0.01em; }
+  .note { margin: 0 0 1rem; font-size: 0.875rem; color: var(--muted); }
+  /* Prior verdict, carried from the atlas so the sheet shows what was already
+     judged instead of asking for the same decision twice. */
+  .verdict-chip {
+    display: inline-block; margin: 0 0 0.6rem;
+    padding: 0.1rem 0.5rem; border-radius: 999px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.625rem; letter-spacing: 0.07em; text-transform: uppercase;
+    border: 1px solid var(--rule); color: var(--muted);
+  }
+  .verdict-chip[data-verdict="accepted"] { border-color: var(--leaf); color: var(--leaf); }
+  .verdict-chip[data-verdict="accepted with refinement"] { border-color: var(--water); color: var(--water); }
+  .verdict-chip[data-verdict="rejected"] { border-color: var(--clay); color: var(--clay); }
+
+  .facts { margin: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+  .facts div { display: flex; gap: 0.4rem; align-items: baseline; }
+  .facts dt {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.625rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .facts dd {
+    margin: 0; font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.75rem; font-variant-numeric: tabular-nums;
+  }
+
+  .plates { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 1rem; }
+  .plate { margin: 0; min-width: 0; }
+  figcaption {
+    display: flex; align-items: center; gap: 0.45rem; margin-bottom: 0.5rem;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.625rem; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .dot { width: 6px; height: 6px; border-radius: 50%; flex: none; }
+  .dot.terminal { background: var(--leaf); }
+  .dot.browser  { background: var(--water); }
+
+  /* The art itself. Line-height 1.0 matches the renderer's
+     DEFAULT_LINE_HEIGHT_RATIO, so box-drawing rows touch exactly as they do
+     in the Garden. Anything looser breaks vertical strokes apart. */
+  .art {
+    margin: 0; padding: 1.1rem 1rem;
+    background: var(--panel);
+    border: 1px solid var(--rule); border-radius: 2px;
+    font-family: ui-monospace, "SF Mono", Menlo, "DejaVu Sans Mono", monospace;
+    font-size: 15px; line-height: 1;
+    white-space: pre; overflow-x: auto; tab-size: 1;
+  }
+  .art.proportional { font-family: "IBM Plex Mono", "DejaVu Sans Mono", ui-monospace, monospace; }
+
+  /* Judgement column ----------------------------------------------------- */
+  .judgement { display: flex; flex-direction: column; gap: 0.6rem; }
+  .mark { display: flex; gap: 0.4rem; }
+  .pill {
+    font: inherit; font-size: 0.8125rem; font-weight: 550;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--rule); border-radius: 999px;
+    background: transparent; color: var(--muted); cursor: pointer;
+    transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+  }
+  .pill:hover { border-color: var(--ink); color: var(--ink); }
+  .pill:focus-visible { outline: 2px solid var(--leaf); outline-offset: 2px; }
+  .pill[aria-pressed="true"].keep   { background: var(--leaf); border-color: var(--leaf); color: var(--paper); }
+  .pill[aria-pressed="true"].redraw { background: var(--clay); border-color: var(--clay); color: var(--paper); }
+
+  .feedback-label {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.625rem; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .feedback {
+    font: inherit; font-size: 0.8125rem; line-height: 1.45;
+    width: 100%; resize: vertical; min-height: 4.5rem;
+    padding: 0.55rem 0.65rem;
+    background: var(--paper); color: var(--ink);
+    border: 1px solid var(--rule); border-radius: 2px;
+  }
+  .feedback:focus-visible { outline: 2px solid var(--leaf); outline-offset: 1px; border-color: var(--leaf); }
+  .feedback::placeholder { color: var(--muted); opacity: 0.75; }
+
+  /* Persistent footer ---------------------------------------------------- */
+  .summary {
+    position: sticky; bottom: 0;
+    background: var(--panel);
+    border-top: 1px solid var(--rule);
+    box-shadow: 0 -2px 16px var(--shadow);
+    padding: 0.85rem 0;
+  }
+  .summary-inner {
+    max-width: 66rem; margin: 0 auto; padding: 0 1.5rem;
+    display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap;
+  }
+  .status-col { display: flex; flex-direction: column; gap: 0.35rem; min-width: 11rem; }
+  .tally {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.75rem; letter-spacing: 0.04em;
+    font-variant-numeric: tabular-nums; color: var(--muted);
+  }
+  .tally b { color: var(--ink); font-weight: 600; }
+  .save-state {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.6875rem; letter-spacing: 0.04em; color: var(--muted);
+  }
+  .save-state .dot { width: 7px; height: 7px; }
+  .save-state[data-ok="yes"] .dot { background: var(--leaf); }
+  .save-state[data-ok="no"]  .dot { background: var(--clay); }
+  .save-state[data-ok="no"]  { color: var(--clay); }
+
+  #transcript {
+    flex: 1 1 22rem; min-width: 0;
+    margin: 0; padding: 0.55rem 0.7rem;
+    background: var(--paper); border: 1px solid var(--rule); border-radius: 2px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.6875rem; line-height: 1.55;
+    max-height: 7rem; overflow-y: auto; white-space: pre-wrap;
+    color: var(--ink);
+    user-select: all;
+  }
+
+  .actions { display: flex; flex-direction: column; gap: 0.35rem; }
+  .action {
+    font: inherit; font-size: 0.75rem; font-weight: 550;
+    padding: 0.4rem 0.85rem; white-space: nowrap;
+    border: 1px solid var(--ink); border-radius: 2px;
+    background: var(--ink); color: var(--paper); cursor: pointer;
+  }
+  .action.secondary { background: transparent; color: var(--ink); border-color: var(--rule); }
+  .action:focus-visible { outline: 2px solid var(--leaf); outline-offset: 2px; }
+  .action[disabled] { opacity: 0.45; cursor: not-allowed; }
+
+  .footnote {
+    margin: 2.5rem 0 0; padding: 1.25rem 0 0;
+    border-top: 1px solid var(--rule);
+    font-size: 0.8125rem; color: var(--muted);
+  }
+  .footnote code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.75rem; }
+
+  @media (max-width: 60rem) {
+    .specimen { grid-template-columns: 1fr; gap: 1.25rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="kicker">operator fixture review record</p>
+    <h1>Fixture art &mdash; accepted set and seeded-room candidates</h1>
+    <p class="standfirst">
+      <strong>The original ten drawings retain their recorded verdicts.</strong>
+      The separately identified pond, stepping-stone and planter variants remain
+      <code>not_reviewed</code> review candidates.
+      Current verdicts come from <code>docs/garden-asset-acceptance.json</code>; the exact
+      operator messages remain in <code>docs/operator-decision-record.md</code>.
+    </p>
+  </header>
+
+  <div class="sheet">
+      <article class="specimen" data-asset="fixture.bench">
+        <div class="meta">
+          <p class="eyebrow">fixture.bench</p>
+          <h2>Bench</h2>
+          <p class="verdict-chip" data-verdict="accepted">current verdict: accepted</p>
+          <p class="reviewed-at">reviewed 2026-07-31T05:05:55Z</p>
+          <p class="note">Round 2: open slatted back and inset legs, so it is a bench rather than a sofa.</p>
+          <dl class="facts">
+            <div><dt>Cell box</dt><dd>9 &times; 4</dd></div>
+            <div><dt>Anchor</dt><dd>4, 3</dd></div>
+          </dl>
+        </div>
+
+        <div class="plates">
+          <figure class="plate">
+            <figcaption><span class="dot terminal"></span>ascii-safe &middot; terminal</figcaption>
+            <pre class="art"> |_|_|_| 
+_|_____|_
+ |     | 
+ &#x27;     &#x27; </pre>
+          </figure>
+          <figure class="plate">
+            <figcaption><span class="dot browser"></span>browser-proportional</figcaption>
+            <pre class="art proportional"> |_|_|_| 
+_|_____|_
+ |     | 
+ &#x27;     &#x27; </pre>
+          </figure>
+        </div>
+
+        <div class="judgement">
+          <div class="mark" role="group" aria-label="Mark for Bench">
+            <button type="button" class="pill keep" data-mark="keep" aria-pressed="false">Reads</button>
+            <button type="button" class="pill redraw" data-mark="redraw" aria-pressed="false">Redraw</button>
+          </div>
+          <label class="feedback-label" for="fb-fixture.bench">What is wrong with it</label>
+          <textarea id="fb-fixture.bench" class="feedback" rows="3"
+                    placeholder="optional &mdash; e.g. reads as a box, can&rsquo;t tell it&rsquo;s water, too small"></textarea>
+        </div>
+      </article>
+
+      <article class="specimen" data-asset="fixture.trellis">
+        <div class="meta">
+          <p class="eyebrow">fixture.trellis</p>
+          <h2>Trellis</h2>
+          <p class="verdict-chip" data-verdict="accepted">current verdict: accepted</p>
+          <p class="reviewed-at">reviewed 2026-07-31T05:05:55Z</p>
+          <p class="note">Accepted in round 1 and left untouched: opposed diagonals, not a box grid.</p>
+          <dl class="facts">
+            <div><dt>Cell box</dt><dd>10 &times; 5</dd></div>
+            <div><dt>Anchor</dt><dd>4, 4</dd></div>
+          </dl>
+        </div>
+
+        <div class="plates">
+          <figure class="plate">
+            <figcaption><span class="dot terminal"></span>ascii-safe &middot; terminal</figcaption>
+            <pre class="art"> \/\/\/\/ 
+ /\/\/\/\ 
+ \/\/\/\/ 
+ /\/\/\/\ 
+ |      | </pre>
+          </figure>
+          <figure class="plate">
+            <figcaption><span class="dot browser"></span>browser-proportional</figcaption>
+            <pre class="art proportional"> \/\/\/\/ 
+ /\/\/\/\ 
+ \/\/\/\/ 
+ /\/\/\/\ 
+ |      | </pre>
+          </figure>
+        </div>
+
+        <div class="judgement">
+          <div class="mark" role="group" aria-label="Mark for Trellis">
+            <button type="button" class="pill keep" data-mark="keep" aria-pressed="false">Reads</button>
+            <button type="button" class="pill redraw" data-mark="redraw" aria-pressed="false">Redraw</button>
+          </div>
+          <label class="feedback-label" for="fb-fixture.trellis">What is wrong with it</label>
+          <textarea id="fb-fixture.trellis" class="feedback" rows="3"
+                    placeholder="optional &mdash; e.g. reads as a box, can&rsquo;t tell it&rsquo;s water, too small"></textarea>
+        </div>
+      </article>
+
+      <article class="specimen" data-asset="fixture.birdbath">
+        <div class="meta">
+          <p class="eyebrow">fixture.birdbath</p>
+          <h2>Birdbath</h2>
+          <p class="verdict-chip" data-verdict="accepted">current verdict: accepted</p>
+          <p class="reviewed-at">reviewed 2026-07-31T05:05:55Z</p>
+          <p class="note">Round 2: stem narrowed against both bowl and foot so the dish reads as a bath, not a cup.</p>
+          <dl class="facts">
+            <div><dt>Cell box</dt><dd>9 &times; 4</dd></div>
+            <div><dt>Anchor</dt><dd>4, 3</dd></div>
+          </dl>
+        </div>
+
+        <div class="plates">
+          <figure class="plate">
+            <figcaption><span class="dot terminal"></span>ascii-safe &middot; terminal</figcaption>
+            <pre class="art"> \~~~~~/ 
+  &#x27;-|-&#x27;  
+   _|_   
+  /___\  </pre>
+          </figure>
+          <figure class="plate">
+            <figcaption><span class="dot browser"></span>browser-proportional</figcaption>
+            <pre class="art proportional"> \~~~~~/ 
+  &#x27;-|-&#x27;  
+   _|_   
+  /___\  </pre>
+          </figure>
+        </div>
+
+        <div class="judgement">
+          <div class="mark" role="group" aria-label="Mark for Birdbath">
+            <button type="button" class="pill keep" data-mark="keep" aria-pressed="false">Reads</button>
+            <button type="button" class="pill redraw" data-mark="redraw" aria-pressed="false">Redraw</button>
+          </div>
+          <label class="feedback-label" for="fb-fixture.birdbath">What is wrong with it</label>
+          <textarea id="fb-fixture.birdbath" class="feedback" rows="3"
+                    placeholder="optional &mdash; e.g. reads as a box, can&rsquo;t tell it&rsquo;s water, too small"></textarea>
+        </div>
+      </article>
+
+      <article class="specimen" data-asset="fixture.lantern">
+        <div class="meta">
+          <p class="eyebrow">fixture.lantern</p>
+          <h2>Lantern</h2>
+          <p class="verdict-chip" data-verdict="accepted">current verdict: accepted</p>
+          <p class="reviewed-at">reviewed 2026-07-31T06:03:29Z</p>
+          <p class="note">Round 3: two rows taller, spread base, and a heavy-vertical override so the proportional post is solid rather than gapped.</p>
+          <dl class="facts">
+            <div><dt>Cell box</dt><dd>7 &times; 7</dd></div>
+            <div><dt>Anchor</dt><dd>3, 6</dd></div>
+          </dl>
+        </div>
+
+        <div class="plates">
+          <figure class="plate">
+            <figcaption><span class="dot terminal"></span>ascii-safe &middot; terminal</figcaption>
+            <pre class="art">   _   
+  (*)  
+  |||  
+  |||  
+  |||  
+  |||  
+ /___\ </pre>
+          </figure>
+          <figure class="plate">
+            <figcaption><span class="dot browser"></span>browser-proportional</figcaption>
+            <pre class="art proportional">   _   
+  (*)  
+  |||  
+  |||  
+  |||  
+  |||  
+ /___\ </pre>
+          </figure>
+        </div>
+
+        <div class="judgement">
+          <div class="mark" role="group" aria-label="Mark for Lantern">
+            <button type="button" class="pill keep" data-mark="keep" aria-pressed="false">Reads</button>
+            <button type="button" class="pill redraw" data-mark="redraw" aria-pressed="false">Redraw</button>
+          </div>
+          <label class="feedback-label" for="fb-fixture.lantern">What is wrong with it</label>
+          <textarea id="fb-fixture.lantern" class="feedback" rows="3"
+                    placeholder="optional &mdash; e.g. reads as a box, can&rsquo;t tell it&rsquo;s water, too small"></textarea>
+        </div>
+      </article>
+
+      <article class="specimen" data-asset="fixture.pond">
+        <div class="meta">
+          <p class="eyebrow">fixture.pond</p>
+          <h2>Pond</h2>
+          <p class="verdict-chip" data-verdict="accepted">current verdict: accepted</p>
+          <p class="reviewed-at">reviewed 2026-07-31T06:03:29Z</p>
+          <p class="note">Round 3 silhouette widened on 2026-08-04 so the path can meet its bank; the 2026-08-05 live review kept that accepted bank and strengthened only the interior ripple train so its side-to-side oscillation reads at full-scene scale.</p>
+          <dl class="facts">
+            <div><dt>Cell box</dt><dd>24 &times; 4</dd></div>
+            <div><dt>Anchor</dt><dd>11, 3</dd></div>
+          </dl>
+        </div>
+
+        <div class="plates">
+          <figure class="plate">
+            <figcaption><span class="dot terminal"></span>ascii-safe &middot; terminal</figcaption>
+            <pre class="art">  _,-~-.,_,-~-.,_,-~-.  
+( ~~      ~~~      ~~  )
+(    ~~~      ~~      ~)
+  `-.,_,-~-.,_,-~-.,_-&#x27; </pre>
+          </figure>
+          <figure class="plate">
+            <figcaption><span class="dot browser"></span>browser-proportional</figcaption>
+            <pre class="art proportional">  _,-~-.,_,-~-.,_,-~-.  
+( ~~      ~~~      ~~  )
+(    ~~~      ~~      ~)
+  `-.,_,-~-.,_,-~-.,_-&#x27; </pre>
+          </figure>
+        </div>
+
+        <div class="judgement">
+          <div class="mark" role="group" aria-label="Mark for Pond">
+            <button type="button" class="pill keep" data-mark="keep" aria-pressed="false">Reads</button>
+            <button type="button" class="pill redraw" data-mark="redraw" aria-pressed="false">Redraw</button>
+          </div>
+          <label class="feedback-label" for="fb-fixture.pond">What is wrong with it</label>
+          <textarea id="fb-fixture.pond" class="feedback" rows="3"
+                    placeholder="optional &mdash; e.g. reads as a box, can&rsquo;t tell it&rsquo;s water, too small"></textarea>
+        </div>
+      </article>
+
+      <article class="specimen" data-asset="fixture.mailbox">
+        <div class="meta">
+          <p class="eyebrow">fixture.mailbox</p>
+          <h2>Memory mailbox</h2>
+          <p class="verdict-chip" data-verdict="accepted">current verdict: accepted</p>
+          <p class="reviewed-at">reviewed 2026-07-31T06:03:29Z</p>
+          <p class="note">Round 2: rebuilt at the operator&#x27;s ~7-column reference; flag is the only mass above the drum.</p>
+          <dl class="facts">
+            <div><dt>Cell box</dt><dd>7 &times; 4</dd></div>
+            <div><dt>Anchor</dt><dd>3, 3</dd></div>
+          </dl>
+        </div>
+
+        <div class="plates">
+          <figure class="plate">
+            <figcaption><span class="dot terminal"></span>ascii-safe &middot; terminal</figcaption>
+            <pre class="art">   7   
+ (__(_)
+   ||  
+  _||_ </pre>
+          </figure>
+          <figure class="plate">
+            <figcaption><span class="dot browser"></span>browser-proportional</figcaption>
+            <pre class="art proportional">   7   
+ (__(_)
+   ||  
+  _||_ </pre>
+          </figure>
+        </div>
+
+        <div class="judgement">
+          <div class="mark" role="group" aria-label="Mark for Memory mailbox">
+            <button type="button" class="pill keep" data-mark="keep" aria-pressed="false">Reads</button>
+            <button type="button" class="pill redraw" data-mark="redraw" aria-pressed="false">Redraw</button>
+          </div>
+          <label class="feedback-label" for="fb-fixture.mailbox">What is wrong with it</label>
+          <textarea id="fb-fixture.mailbox" class="feedback" rows="3"
+                    placeholder="optional &mdash; e.g. reads as a box, can&rsquo;t tell it&rsquo;s water, too small"></textarea>
+        </div>
+      </article>
+
+      <article class="specimen" data-asset="fixture.stepping_stones">
+        <div class="meta">
+          <p class="eyebrow">fixture.stepping_stones</p>
+          <h2>Stepping stones</h2>
+          <p class="verdict-chip" data-verdict="accepted">current verdict: accepted</p>
+          <p class="reviewed-at">reviewed 2026-07-31T06:03:29Z</p>
+          <p class="note">Round 2: flat top surface instead of an open bowl, so it is stood on, not filled.</p>
+          <dl class="facts">
+            <div><dt>Cell box</dt><dd>12 &times; 2</dd></div>
+            <div><dt>Anchor</dt><dd>5, 1</dd></div>
+          </dl>
+        </div>
+
+        <div class="plates">
+          <figure class="plate">
+            <figcaption><span class="dot terminal"></span>ascii-safe &middot; terminal</figcaption>
+            <pre class="art"> (=)  (=)   
+    (=)  (=)</pre>
+          </figure>
+          <figure class="plate">
+            <figcaption><span class="dot browser"></span>browser-proportional</figcaption>
+            <pre class="art proportional"> (=)  (=)   
+    (=)  (=)</pre>
+          </figure>
+        </div>
+
+        <div class="judgement">
+          <div class="mark" role="group" aria-label="Mark for Stepping stones">
+            <button type="button" class="pill keep" data-mark="keep" aria-pressed="false">Reads</button>
+            <button type="button" class="pill redraw" data-mark="redraw" aria-pressed="false">Redraw</button>
+          </div>
+          <label class="feedback-label" for="fb-fixture.stepping_stones">What is wrong with it</label>
+          <textarea id="fb-fixture.stepping_stones" class="feedback" rows="3"
+                    placeholder="optional &mdash; e.g. reads as a box, can&rsquo;t tell it&rsquo;s water, too small"></textarea>
+        </div>
+      </article>
+
+      <article class="specimen" data-asset="fixture.bridge">
+        <div class="meta">
+          <p class="eyebrow">fixture.bridge</p>
+          <h2>Bridge</h2>
+          <p class="verdict-chip" data-verdict="accepted">current verdict: accepted</p>
+          <p class="reviewed-at">reviewed 2026-07-31T06:03:29Z</p>
+          <p class="note">Round 3: drawn from the operator&#x27;s own sketch -- rising approaches, interleaved deck and railing, open span.</p>
+          <dl class="facts">
+            <div><dt>Cell box</dt><dd>11 &times; 3</dd></div>
+            <div><dt>Anchor</dt><dd>5, 2</dd></div>
+          </dl>
+        </div>
+
+        <div class="plates">
+          <figure class="plate">
+            <figcaption><span class="dot terminal"></span>ascii-safe &middot; terminal</figcaption>
+            <pre class="art"> /=|=|=|=\ 
+_|       |_
+ &#x27;       &#x27; </pre>
+          </figure>
+          <figure class="plate">
+            <figcaption><span class="dot browser"></span>browser-proportional</figcaption>
+            <pre class="art proportional"> /=|=|=|=\ 
+_|       |_
+ &#x27;       &#x27; </pre>
+          </figure>
+        </div>
+
+        <div class="judgement">
+          <div class="mark" role="group" aria-label="Mark for Bridge">
+            <button type="button" class="pill keep" data-mark="keep" aria-pressed="false">Reads</button>
+            <button type="button" class="pill redraw" data-mark="redraw" aria-pressed="false">Redraw</button>
+          </div>
+          <label class="feedback-label" for="fb-fixture.bridge">What is wrong with it</label>
+          <textarea id="fb-fixture.bridge" class="feedback" rows="3"
+                    placeholder="optional &mdash; e.g. reads as a box, can&rsquo;t tell it&rsquo;s water, too small"></textarea>
+        </div>
+      </article>
+
+      <article class="specimen" data-asset="fixture.planter">
+        <div class="meta">
+          <p class="eyebrow">fixture.planter</p>
+          <h2>Planter</h2>
+          <p class="verdict-chip" data-verdict="accepted">current verdict: accepted</p>
+          <p class="reviewed-at">reviewed 2026-07-31T06:03:29Z</p>
+          <p class="note">Round 3: base kept as accepted; growth redrawn with a stem run so it reads as planted, not scattered.</p>
+          <dl class="facts">
+            <div><dt>Cell box</dt><dd>11 &times; 4</dd></div>
+            <div><dt>Anchor</dt><dd>5, 3</dd></div>
+          </dl>
+        </div>
+
+        <div class="plates">
+          <figure class="plate">
+            <figcaption><span class="dot terminal"></span>ascii-safe &middot; terminal</figcaption>
+            <pre class="art">   Y   Y   
+  ,|   |,  
+ [_______] 
+  \_|_|_/  </pre>
+          </figure>
+          <figure class="plate">
+            <figcaption><span class="dot browser"></span>browser-proportional</figcaption>
+            <pre class="art proportional">   Y   Y   
+  ,|   |,  
+ [_______] 
+  \_|_|_/  </pre>
+          </figure>
+        </div>
+
+        <div class="judgement">
+          <div class="mark" role="group" aria-label="Mark for Planter">
+            <button type="button" class="pill keep" data-mark="keep" aria-pressed="false">Reads</button>
+            <button type="button" class="pill redraw" data-mark="redraw" aria-pressed="false">Redraw</button>
+          </div>
+          <label class="feedback-label" for="fb-fixture.planter">What is wrong with it</label>
+          <textarea id="fb-fixture.planter" class="feedback" rows="3"
+                    placeholder="optional &mdash; e.g. reads as a box, can&rsquo;t tell it&rsquo;s water, too small"></textarea>
+        </div>
+      </article>
+
+      <article class="specimen" data-asset="fixture.arbor">
+        <div class="meta">
+          <p class="eyebrow">fixture.arbor</p>
+          <h2>Arbor</h2>
+          <p class="verdict-chip" data-verdict="accepted">current verdict: accepted</p>
+          <p class="reviewed-at">reviewed 2026-07-31T06:03:29Z</p>
+          <p class="note">Round 2: curved shoulders and paired uprights so it reads as walk-through, not a doorway.</p>
+          <dl class="facts">
+            <div><dt>Cell box</dt><dd>11 &times; 4</dd></div>
+            <div><dt>Anchor</dt><dd>5, 3</dd></div>
+          </dl>
+        </div>
+
+        <div class="plates">
+          <figure class="plate">
+            <figcaption><span class="dot terminal"></span>ascii-safe &middot; terminal</figcaption>
+            <pre class="art">  ,~^~^~,  
+ ((     )) 
+ ||     || 
+ ||     || </pre>
+          </figure>
+          <figure class="plate">
+            <figcaption><span class="dot browser"></span>browser-proportional</figcaption>
+            <pre class="art proportional">  ,~^~^~,  
+ ((     )) 
+ ||     || 
+ ||     || </pre>
+          </figure>
+        </div>
+
+        <div class="judgement">
+          <div class="mark" role="group" aria-label="Mark for Arbor">
+            <button type="button" class="pill keep" data-mark="keep" aria-pressed="false">Reads</button>
+            <button type="button" class="pill redraw" data-mark="redraw" aria-pressed="false">Redraw</button>
+          </div>
+          <label class="feedback-label" for="fb-fixture.arbor">What is wrong with it</label>
+          <textarea id="fb-fixture.arbor" class="feedback" rows="3"
+                    placeholder="optional &mdash; e.g. reads as a box, can&rsquo;t tell it&rsquo;s water, too small"></textarea>
+        </div>
+      </article>
+
+      <article class="specimen" data-asset="fixture.planter_one">
+        <div class="meta">
+          <p class="eyebrow">fixture.planter_one</p>
+          <h2>Planter — one</h2>
+          <p class="verdict-chip" data-verdict="not_reviewed">current verdict: not reviewed</p>
+          <p class="reviewed-at">reviewed not yet</p>
+          <p class="note">Seeded one-blossom planter candidate; the accepted vessel is unchanged.</p>
+          <dl class="facts">
+            <div><dt>Cell box</dt><dd>11 &times; 4</dd></div>
+            <div><dt>Anchor</dt><dd>5, 3</dd></div>
+          </dl>
+        </div>
+
+        <div class="plates">
+          <figure class="plate">
+            <figcaption><span class="dot terminal"></span>ascii-safe &middot; terminal</figcaption>
+            <pre class="art">     Y     
+    ,|     
+ [_______] 
+  \_|_|_/  </pre>
+          </figure>
+          <figure class="plate">
+            <figcaption><span class="dot browser"></span>browser-proportional</figcaption>
+            <pre class="art proportional">     Y     
+    ,|     
+ [_______] 
+  \_|_|_/  </pre>
+          </figure>
+        </div>
+
+        <div class="judgement">
+          <div class="mark" role="group" aria-label="Mark for Planter — one">
+            <button type="button" class="pill keep" data-mark="keep" aria-pressed="false">Reads</button>
+            <button type="button" class="pill redraw" data-mark="redraw" aria-pressed="false">Redraw</button>
+          </div>
+          <label class="feedback-label" for="fb-fixture.planter_one">What is wrong with it</label>
+          <textarea id="fb-fixture.planter_one" class="feedback" rows="3"
+                    placeholder="optional &mdash; e.g. reads as a box, can&rsquo;t tell it&rsquo;s water, too small"></textarea>
+        </div>
+      </article>
+
+      <article class="specimen" data-asset="fixture.planter_three">
+        <div class="meta">
+          <p class="eyebrow">fixture.planter_three</p>
+          <h2>Planter — three</h2>
+          <p class="verdict-chip" data-verdict="not_reviewed">current verdict: not reviewed</p>
+          <p class="reviewed-at">reviewed not yet</p>
+          <p class="note">Seeded three-blossom planter candidate with separated stems and a widened authored vessel.</p>
+          <dl class="facts">
+            <div><dt>Cell box</dt><dd>13 &times; 4</dd></div>
+            <div><dt>Anchor</dt><dd>6, 3</dd></div>
+          </dl>
+        </div>
+
+        <div class="plates">
+          <figure class="plate">
+            <figcaption><span class="dot terminal"></span>ascii-safe &middot; terminal</figcaption>
+            <pre class="art">  Y   Y   Y  
+ ,|   |   |, 
+ [_________] 
+  \__|_|__/  </pre>
+          </figure>
+          <figure class="plate">
+            <figcaption><span class="dot browser"></span>browser-proportional</figcaption>
+            <pre class="art proportional">  Y   Y   Y  
+ ,|   |   |, 
+ [_________] 
+  \__|_|__/  </pre>
+          </figure>
+        </div>
+
+        <div class="judgement">
+          <div class="mark" role="group" aria-label="Mark for Planter — three">
+            <button type="button" class="pill keep" data-mark="keep" aria-pressed="false">Reads</button>
+            <button type="button" class="pill redraw" data-mark="redraw" aria-pressed="false">Redraw</button>
+          </div>
+          <label class="feedback-label" for="fb-fixture.planter_three">What is wrong with it</label>
+          <textarea id="fb-fixture.planter_three" class="feedback" rows="3"
+                    placeholder="optional &mdash; e.g. reads as a box, can&rsquo;t tell it&rsquo;s water, too small"></textarea>
+        </div>
+      </article>
+
+      <article class="specimen" data-asset="fixture.pond_compact">
+        <div class="meta">
+          <p class="eyebrow">fixture.pond_compact</p>
+          <h2>Pond — compact</h2>
+          <p class="verdict-chip" data-verdict="not_reviewed">current verdict: not reviewed</p>
+          <p class="reviewed-at">reviewed not yet</p>
+          <p class="note">Seeded compact pond candidate: the accepted shallow-water grammar in a shorter loop.</p>
+          <dl class="facts">
+            <div><dt>Cell box</dt><dd>20 &times; 4</dd></div>
+            <div><dt>Anchor</dt><dd>9, 3</dd></div>
+          </dl>
+        </div>
+
+        <div class="plates">
+          <figure class="plate">
+            <figcaption><span class="dot terminal"></span>ascii-safe &middot; terminal</figcaption>
+            <pre class="art">  _,-~-.,_,-~-.,_-. 
+(~~    ~~~    ~~   )
+(    ~~    ~~~    ~)
+  `-.,_,-~-.,_,-&#x27;   </pre>
+          </figure>
+          <figure class="plate">
+            <figcaption><span class="dot browser"></span>browser-proportional</figcaption>
+            <pre class="art proportional">  _,-~-.,_,-~-.,_-. 
+(~~    ~~~    ~~   )
+(    ~~    ~~~    ~)
+  `-.,_,-~-.,_,-&#x27;   </pre>
+          </figure>
+        </div>
+
+        <div class="judgement">
+          <div class="mark" role="group" aria-label="Mark for Pond — compact">
+            <button type="button" class="pill keep" data-mark="keep" aria-pressed="false">Reads</button>
+            <button type="button" class="pill redraw" data-mark="redraw" aria-pressed="false">Redraw</button>
+          </div>
+          <label class="feedback-label" for="fb-fixture.pond_compact">What is wrong with it</label>
+          <textarea id="fb-fixture.pond_compact" class="feedback" rows="3"
+                    placeholder="optional &mdash; e.g. reads as a box, can&rsquo;t tell it&rsquo;s water, too small"></textarea>
+        </div>
+      </article>
+
+      <article class="specimen" data-asset="fixture.pond_round">
+        <div class="meta">
+          <p class="eyebrow">fixture.pond_round</p>
+          <h2>Pond — round</h2>
+          <p class="verdict-chip" data-verdict="not_reviewed">current verdict: not reviewed</p>
+          <p class="reviewed-at">reviewed not yet</p>
+          <p class="note">Seeded round pond candidate: greater front-to-back diameter while retaining open water and moving ripple trains.</p>
+          <dl class="facts">
+            <div><dt>Cell box</dt><dd>22 &times; 6</dd></div>
+            <div><dt>Anchor</dt><dd>10, 5</dd></div>
+          </dl>
+        </div>
+
+        <div class="plates">
+          <figure class="plate">
+            <figcaption><span class="dot terminal"></span>ascii-safe &middot; terminal</figcaption>
+            <pre class="art">    _,-~-.,_,-~-.     
+  ,&#x27;             `.   
+( ~~    ~~~    ~~    )
+(    ~~    ~~~    ~~ )
+  `-.,_       _,-&#x27;    
+      `-~-~-~-&#x27;       </pre>
+          </figure>
+          <figure class="plate">
+            <figcaption><span class="dot browser"></span>browser-proportional</figcaption>
+            <pre class="art proportional">    _,-~-.,_,-~-.     
+  ,&#x27;             `.   
+( ~~    ~~~    ~~    )
+(    ~~    ~~~    ~~ )
+  `-.,_       _,-&#x27;    
+      `-~-~-~-&#x27;       </pre>
+          </figure>
+        </div>
+
+        <div class="judgement">
+          <div class="mark" role="group" aria-label="Mark for Pond — round">
+            <button type="button" class="pill keep" data-mark="keep" aria-pressed="false">Reads</button>
+            <button type="button" class="pill redraw" data-mark="redraw" aria-pressed="false">Redraw</button>
+          </div>
+          <label class="feedback-label" for="fb-fixture.pond_round">What is wrong with it</label>
+          <textarea id="fb-fixture.pond_round" class="feedback" rows="3"
+                    placeholder="optional &mdash; e.g. reads as a box, can&rsquo;t tell it&rsquo;s water, too small"></textarea>
+        </div>
+      </article>
+
+      <article class="specimen" data-asset="fixture.stepping_stones_five">
+        <div class="meta">
+          <p class="eyebrow">fixture.stepping_stones_five</p>
+          <h2>Stepping stones — five</h2>
+          <p class="verdict-chip" data-verdict="not_reviewed">current verdict: not reviewed</p>
+          <p class="reviewed-at">reviewed not yet</p>
+          <p class="note">Seeded five-stone path candidate with a longer staggered approach.</p>
+          <dl class="facts">
+            <div><dt>Cell box</dt><dd>16 &times; 3</dd></div>
+            <div><dt>Anchor</dt><dd>7, 2</dd></div>
+          </dl>
+        </div>
+
+        <div class="plates">
+          <figure class="plate">
+            <figcaption><span class="dot terminal"></span>ascii-safe &middot; terminal</figcaption>
+            <pre class="art"> (=)       (=)  
+    (=)         
+       (=)  (=) </pre>
+          </figure>
+          <figure class="plate">
+            <figcaption><span class="dot browser"></span>browser-proportional</figcaption>
+            <pre class="art proportional"> (=)       (=)  
+    (=)         
+       (=)  (=) </pre>
+          </figure>
+        </div>
+
+        <div class="judgement">
+          <div class="mark" role="group" aria-label="Mark for Stepping stones — five">
+            <button type="button" class="pill keep" data-mark="keep" aria-pressed="false">Reads</button>
+            <button type="button" class="pill redraw" data-mark="redraw" aria-pressed="false">Redraw</button>
+          </div>
+          <label class="feedback-label" for="fb-fixture.stepping_stones_five">What is wrong with it</label>
+          <textarea id="fb-fixture.stepping_stones_five" class="feedback" rows="3"
+                    placeholder="optional &mdash; e.g. reads as a box, can&rsquo;t tell it&rsquo;s water, too small"></textarea>
+        </div>
+      </article>
+
+      <article class="specimen" data-asset="fixture.stepping_stones_three">
+        <div class="meta">
+          <p class="eyebrow">fixture.stepping_stones_three</p>
+          <h2>Stepping stones — three</h2>
+          <p class="verdict-chip" data-verdict="not_reviewed">current verdict: not reviewed</p>
+          <p class="reviewed-at">reviewed not yet</p>
+          <p class="note">Seeded three-stone path candidate with a short staggered approach.</p>
+          <dl class="facts">
+            <div><dt>Cell box</dt><dd>10 &times; 2</dd></div>
+            <div><dt>Anchor</dt><dd>4, 1</dd></div>
+          </dl>
+        </div>
+
+        <div class="plates">
+          <figure class="plate">
+            <figcaption><span class="dot terminal"></span>ascii-safe &middot; terminal</figcaption>
+            <pre class="art"> (=)      
+   (=) (=)</pre>
+          </figure>
+          <figure class="plate">
+            <figcaption><span class="dot browser"></span>browser-proportional</figcaption>
+            <pre class="art proportional"> (=)      
+   (=) (=)</pre>
+          </figure>
+        </div>
+
+        <div class="judgement">
+          <div class="mark" role="group" aria-label="Mark for Stepping stones — three">
+            <button type="button" class="pill keep" data-mark="keep" aria-pressed="false">Reads</button>
+            <button type="button" class="pill redraw" data-mark="redraw" aria-pressed="false">Redraw</button>
+          </div>
+          <label class="feedback-label" for="fb-fixture.stepping_stones_three">What is wrong with it</label>
+          <textarea id="fb-fixture.stepping_stones_three" class="feedback" rows="3"
+                    placeholder="optional &mdash; e.g. reads as a box, can&rsquo;t tell it&rsquo;s water, too small"></textarea>
+        </div>
+      </article>
+  </div>
+
+  <p class="footnote">
+    Rendered from <code>src/lateletter/garden/data/atlas.v2.json</code>, so this is the
+    art as stored. The proportional column is drawn here as ordinary browser text; the
+    Garden itself measures those rows through PreText and places each glyph at its
+    measured offset, so treat this column as the drawing, not the final geometry.
+    <br><br>
+    Still undrawn and holding a single placeholder glyph: fixture.fence_gate, fixture.sundial, fixture.table_chairs, fixture.well, fixture.wind_chime, fixture.shed_edge, fixture.tool_rack, fixture.watering_can, fixture.compost, fixture.basket, fixture.sign, fixture.memorial_stone, collectible.pressed_flower, collectible.feather, collectible.seed_packet, collectible.smooth_stone.
+  </p>
+</div>
+
+<div class="summary">
+  <div class="summary-inner">
+    <div class="status-col">
+      <span class="tally" id="tally"></span>
+      <span class="save-state" id="save-state"><span class="dot"></span><span id="save-text">&hellip;</span></span>
+    </div>
+    <pre id="transcript" tabindex="0" aria-label="Review transcript"></pre>
+    <div class="actions">
+      <button type="button" class="action" id="copy">Copy</button>
+      <button type="button" class="action secondary" id="download">Download</button>
+      <button type="button" class="action secondary" id="clear">Clear all</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var STORAGE_KEY = 'lateletter.fixture-review.seeded-room.v1';
+  var specimens = Array.prototype.slice.call(document.querySelectorAll('.specimen'));
+  var transcript = document.getElementById('transcript');
+  var saveState = document.getElementById('save-state');
+  var saveText = document.getElementById('save-text');
+
+  // { assetId: { mark: 'keep'|'redraw'|null, note: string } }
+  var review = {};
+  var storageUsable = true;
+
+  /* --- persistence ---------------------------------------------------- */
+  // A sandboxed frame can THROW on localStorage access rather than returning
+  // null, so every touch is guarded. A storage failure degrades the page to
+  // the always-visible transcript; it never breaks it.
+  function readStored() {
+    try {
+      var raw = window.localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (error) {
+      storageUsable = false;
+      return null;
+    }
+  }
+
+  function writeStored() {
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(review));
+      return true;
+    } catch (error) {
+      storageUsable = false;
+      return false;
+    }
+  }
+
+  function reportSaveState(saved) {
+    if (storageUsable && saved) {
+      saveState.dataset.ok = 'yes';
+      saveText.textContent = 'saved in this browser';
+    } else {
+      saveState.dataset.ok = 'no';
+      // Stated plainly rather than hidden: the operator needs to know to copy
+      // the transcript before leaving the page.
+      saveText.textContent = 'not saving \u2014 copy before you leave';
+    }
+  }
+
+  /* --- transcript ----------------------------------------------------- */
+  function entriesFor(mark) {
+    return Object.keys(review).filter(function (id) { return review[id].mark === mark; });
+  }
+
+  function buildTranscript() {
+    var lines = ['# LateLetter fixture review, seeded-room variants'];
+    var keep = entriesFor('keep');
+    var redraw = entriesFor('redraw');
+
+    if (keep.length) lines.push('', 'READS: ' + keep.join(', '));
+    if (redraw.length) lines.push('', 'REDRAW: ' + redraw.join(', '));
+
+    var noted = Object.keys(review).filter(function (id) {
+      return review[id].note && review[id].note.trim();
+    });
+    if (noted.length) {
+      lines.push('', '## notes');
+      noted.forEach(function (id) {
+        var mark = review[id].mark ? ' [' + review[id].mark + ']' : '';
+        lines.push('- ' + id + mark + ': ' + review[id].note.trim().replace(/\s+/g, ' '));
+      });
+    }
+
+    var unmarked = specimens.length - keep.length - redraw.length;
+    if (unmarked > 0) lines.push('', '(' + unmarked + ' still unmarked)');
+    return lines.join('\n');
+  }
+
+  function refresh(persist) {
+    var keep = entriesFor('keep').length;
+    var redraw = entriesFor('redraw').length;
+    document.getElementById('tally').innerHTML =
+      '<b>' + keep + '</b> reads &nbsp; <b>' + redraw + '</b> redraw &nbsp; <b>' +
+      (specimens.length - keep - redraw) + '</b> unmarked';
+    transcript.textContent = buildTranscript();
+    if (persist !== false) reportSaveState(writeStored());
+  }
+
+  /* --- wiring --------------------------------------------------------- */
+  var stored = readStored() || {};
+
+  specimens.forEach(function (specimen) {
+    var asset = specimen.dataset.asset;
+    var entry = stored[asset] || { mark: null, note: '' };
+    review[asset] = { mark: entry.mark || null, note: entry.note || '' };
+
+    var textarea = specimen.querySelector('.feedback');
+    textarea.value = review[asset].note;
+    if (review[asset].mark) specimen.dataset.state = review[asset].mark;
+
+    Array.prototype.forEach.call(specimen.querySelectorAll('.pill'), function (button) {
+      button.setAttribute('aria-pressed', String(review[asset].mark === button.dataset.mark));
+      button.addEventListener('click', function () {
+        // Clicking the active mark again clears it, so a misclick is
+        // recoverable without a third control.
+        review[asset].mark = review[asset].mark === button.dataset.mark ? null : button.dataset.mark;
+        if (review[asset].mark) specimen.dataset.state = review[asset].mark;
+        else specimen.removeAttribute('data-state');
+        Array.prototype.forEach.call(specimen.querySelectorAll('.pill'), function (sibling) {
+          sibling.setAttribute('aria-pressed', String(review[asset].mark === sibling.dataset.mark));
+        });
+        refresh();
+      });
+    });
+
+    // Saved on every keystroke rather than on blur: a tab dismissed
+    // mid-sentence must not lose the sentence.
+    textarea.addEventListener('input', function () {
+      review[asset].note = textarea.value;
+      refresh();
+    });
+  });
+
+  /* --- actions -------------------------------------------------------- */
+  function selectTranscript() {
+    // Clipboard access can be denied inside a frame. Selecting the text is the
+    // fallback that needs no permission at all.
+    var range = document.createRange();
+    range.selectNodeContents(transcript);
+    var selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    transcript.focus();
+  }
+
+  document.getElementById('copy').addEventListener('click', function (event) {
+    var button = event.currentTarget;
+    var text = buildTranscript();
+    var restore = function (message) {
+      button.textContent = message;
+      window.setTimeout(function () { button.textContent = 'Copy'; }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(
+        function () { restore('Copied'); },
+        function () { selectTranscript(); restore('Select + \u2318C'); }
+      );
+    } else {
+      selectTranscript();
+      restore('Select + \u2318C');
+    }
+  });
+
+  var downloadButton = document.getElementById('download');
+  if (!window.claude || !window.claude.downloads) {
+    // Disable UI that cannot function here rather than offering a button that
+    // fails every time it is pressed.
+    downloadButton.disabled = true;
+    downloadButton.title = 'Downloads are unavailable in this view';
+  } else {
+    downloadButton.addEventListener('click', function (event) {
+      var button = event.currentTarget;
+      var restore = function (message) {
+        button.textContent = message;
+        window.setTimeout(function () { button.textContent = 'Download'; }, 2200);
+      };
+      window.claude.downloads.save({
+        filename: 'fixture-review-seeded-room.md',
+        data: buildTranscript() + '\n'
+      }).then(function () { restore('Saved'); }, function (error) {
+        // The viewer declining is a normal outcome, not an error to retry.
+        var code = error && error.code;
+        if (code === 'declined') restore('Download');
+        else if (code === 'rate_limited') restore('Try again');
+        else restore('Unavailable');
+      });
+    });
+  }
+
+  document.getElementById('clear').addEventListener('click', function () {
+    if (!window.confirm('Clear every mark and note on this sheet?')) return;
+    specimens.forEach(function (specimen) {
+      var asset = specimen.dataset.asset;
+      review[asset] = { mark: null, note: '' };
+      specimen.removeAttribute('data-state');
+      specimen.querySelector('.feedback').value = '';
+      Array.prototype.forEach.call(specimen.querySelectorAll('.pill'), function (pill) {
+        pill.setAttribute('aria-pressed', 'false');
+      });
+    });
+    refresh();
+  });
+
+  // Probe storage once at load so the indicator is truthful before the
+  // operator has typed anything and discovered otherwise the hard way.
+  refresh(true);
+})();
+</script>

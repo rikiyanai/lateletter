@@ -1,0 +1,43 @@
+{
+  "claim": "exact pre-July 19 runnable/deployed comparison baseline; not operator acceptance",
+  "tree_commit": "262050d25b46fae893c109e2d4cd9aec06b4f2b2",
+  "viewer_blob": "5632ab0c58aa77ff1330d2599d52fcadc625b538",
+  "viewer_sha256": "555a9384393157d36226a38c6e0e697d8c6626318bc5c7c5cc315a0f4e017224",
+  "last_viewer_change": "5b7dae80257f76e3778f309e4a82e23d0649485e",
+  "export_method": "git archive 262050d25b46fae893c109e2d4cd9aec06b4f2b2",
+  "url": "http://127.0.0.1:8879/viewer-bnw.html",
+  "actions": [
+    "open viewer-bnw.html",
+    "activate [get demo letter]",
+    "wait 2.5 seconds",
+    "capture live recipient Garden"
+  ],
+  "artifacts": {
+    "recipient-garden-900x968.jpg": {
+      "sha256": "d8b8da2279666b047d14ddd8d0be7900e913639dcc19d98fe50cb21c16184e37",
+      "width": 900,
+      "height": 968
+    },
+    "recipient-garden-motion-720w-10s.gif": {
+      "sha256": "3b20b0f9547459e6d9b4a260852c4d46404e23e8a86508208385a12c6672df96",
+      "width": 720,
+      "height": 774,
+      "fps": 10,
+      "duration_seconds": 10,
+      "decoded_frames": 100
+    },
+    "recipient-garden-motion-contact-sheet.jpg": {
+      "sha256": "1572204e6ead189fc510598956670433f46b9426e6a6572ccbd0e4bb46590820",
+      "width": 1800,
+      "height": 387,
+      "sampled_frames": 5
+    }
+  },
+  "pretext": {
+    "source": "https://cdn.jsdelivr.net/npm/@chenglou/pretext@0.0.4/+esm",
+    "letter_body_layout": true,
+    "garden_renderer": false,
+    "vendored": false
+  },
+  "visual_observation": "The exact historical Garden is sparse at this viewport: large open sky, a narrow bottom planting band, two large trees, smaller plants, and moving ambient birds. Provenance does not make this an accepted quality target."
+}

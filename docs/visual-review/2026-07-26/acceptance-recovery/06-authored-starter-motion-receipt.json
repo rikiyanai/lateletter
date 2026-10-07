@@ -1,0 +1,565 @@
+{
+  "acceptance_claim": false,
+  "artifacts": {
+    "desktop_master": {
+      "bytes": 258298,
+      "path": "/Users/r/Projects/LateLetter/docs/visual-review/2026-07-26/acceptance-recovery/06-authored-starter-motion-desktop-1600x1000.webm",
+      "sha256": "1ce8e84f970b5cde6fff33dd13bafa37b820982b250f1eb0fb04f31b2fb1ccab"
+    },
+    "desktop_still": {
+      "bytes": 96322,
+      "path": "/Users/r/Projects/LateLetter/docs/visual-review/2026-07-26/acceptance-recovery/06-authored-starter-motion-desktop-1600x1000.png",
+      "sha256": "500cb57d0585025d9a6ed9becb73c03c72258ae6457eff838c837bb7947cb811"
+    },
+    "gif": {
+      "bytes": 1237938,
+      "path": "/Users/r/Projects/LateLetter/docs/visual-review/2026-07-26/acceptance-recovery/06-authored-starter-motion-desktop-960x600.gif",
+      "sha256": "67f8ee55d616895363da213275a2b8ad97fad7c29b6f13b3b769e8682b1babe2"
+    },
+    "mobile_master": {
+      "bytes": 80431,
+      "path": "/Users/r/Projects/LateLetter/docs/visual-review/2026-07-26/acceptance-recovery/06-authored-starter-motion-mobile-390x844.webm",
+      "sha256": "e4cb148748b0b78a165ea63ba237242fd367d74cd30b16bb4221fba4dab558cd"
+    },
+    "mobile_still": {
+      "bytes": 37934,
+      "path": "/Users/r/Projects/LateLetter/docs/visual-review/2026-07-26/acceptance-recovery/06-authored-starter-motion-mobile-390x844.png",
+      "sha256": "b770ed6c9f2b3d149e082b532926ca16fff56b0c34102b242db0107e72b741e2"
+    }
+  },
+  "captured_at_utc": "2026-07-26T09:28:00.068896+00:00",
+  "captures": {
+    "desktop": {
+      "aria_label": "storybook sky. summer day. Garden with 5 plants, 5 fixtures, 1 relationship animal, 1 collectibles. Inventory: empty.",
+      "bad_responses": [],
+      "console_errors": [],
+      "dimensions": {
+        "height": 1000,
+        "width": 1600
+      },
+      "dom_samples": [
+        {
+          "index": 0,
+          "performance_ms": 2755.6,
+          "text_length": 8163,
+          "text_sha256": "fc130b7d5eabaaeb42dfd9fdf4981a19b59fbb24a82565a885ad4c7451f17d46"
+        },
+        {
+          "index": 1,
+          "performance_ms": 3761.4,
+          "text_length": 8163,
+          "text_sha256": "85e42e04f3ecb240a37b811e30b8c3731edc9adea208472fe4479eaaf53c98c0"
+        },
+        {
+          "index": 2,
+          "performance_ms": 4766.4,
+          "text_length": 8163,
+          "text_sha256": "c068f870b959be8de859393312060afdf12b0b64dfff35150597a2bd4e451a10"
+        },
+        {
+          "index": 3,
+          "performance_ms": 5771.4,
+          "text_length": 8163,
+          "text_sha256": "bf24373e39108cbf0ca63172c0ccbbba3016d5c111505ce7157fe456b5c33a82"
+        },
+        {
+          "index": 4,
+          "performance_ms": 6775.9,
+          "text_length": 8163,
+          "text_sha256": "c22a781d75f58bae78a21a5cc3b47b61f83b5053399edb7cb1e8773e24e95c3f"
+        },
+        {
+          "index": 5,
+          "performance_ms": 7781.9,
+          "text_length": 8163,
+          "text_sha256": "9cf9d58ceb471f680d5eff8fc90543621c2a4ac79015a5ab3decb3cbd5cac365"
+        },
+        {
+          "index": 6,
+          "performance_ms": 8786.9,
+          "text_length": 8163,
+          "text_sha256": "2b75904c3db3c6a9fe1d1a3b8d4acf3871a6977ed403b9040c51ff4563e030b8"
+        },
+        {
+          "index": 7,
+          "performance_ms": 9792.2,
+          "text_length": 8163,
+          "text_sha256": "4f5cf3e75c4e322518cbd50134e4e2672d052f580a4dc30d5f6df17041c5fb6f"
+        },
+        {
+          "index": 8,
+          "performance_ms": 10798.3,
+          "text_length": 8163,
+          "text_sha256": "2f28b787824b785a7c65e59ede71daa65ed38d68d2d794ad95fb6d89b88de9a6"
+        },
+        {
+          "index": 9,
+          "performance_ms": 11804.1,
+          "text_length": 8163,
+          "text_sha256": "693f931bf216873642eee8d634f0a141d4074bfe867b7d430a3e723cf71556f0"
+        }
+      ],
+      "object_counts": {
+        "collectibles": 1,
+        "fixtures": 5,
+        "plants": 5,
+        "relationship_animals": 1
+      },
+      "page_errors": [],
+      "reduced_motion": false,
+      "title": "your quiet standalone garden.",
+      "unique_dom_sample_count": 10
+    },
+    "mobile": {
+      "aria_label": "storybook sky. summer day. Garden with 5 plants, 5 fixtures, 1 relationship animal, 1 collectibles. Inventory: empty.",
+      "bad_responses": [],
+      "console_errors": [],
+      "dimensions": {
+        "height": 844,
+        "width": 390
+      },
+      "dom_samples": [
+        {
+          "index": 0,
+          "performance_ms": 2706.1,
+          "text_length": 2443,
+          "text_sha256": "1b5ccd8d64d4183a671d3f6ddcf6a007d9f412b5dc38887194c19b2791dcb3b7"
+        },
+        {
+          "index": 1,
+          "performance_ms": 3714.1,
+          "text_length": 2443,
+          "text_sha256": "a54377fc58fab2076f8754fb2d42796126937e82d8ea0da1960a84f83dcee323"
+        },
+        {
+          "index": 2,
+          "performance_ms": 4722.3,
+          "text_length": 2443,
+          "text_sha256": "62e16892c5e9e0c1b3e43b3c404a3c672f12c6397f3a0cf0d42731df43ede03c"
+        },
+        {
+          "index": 3,
+          "performance_ms": 5728,
+          "text_length": 2443,
+          "text_sha256": "4d152349372f28e8545c3ad5d457bec525715028ab59aa317d28c67138e05a7c"
+        },
+        {
+          "index": 4,
+          "performance_ms": 6733.2,
+          "text_length": 2443,
+          "text_sha256": "acbc08a84832450dea97f9fae0d57ec8eeca8f5116ef2349cfce3186042b3fa5"
+        },
+        {
+          "index": 5,
+          "performance_ms": 7738.1,
+          "text_length": 2443,
+          "text_sha256": "a7a3915e7fab48235c1409a0709b78d3fbed1092a66d63e34eb6efecadf7f01b"
+        },
+        {
+          "index": 6,
+          "performance_ms": 8743.5,
+          "text_length": 2443,
+          "text_sha256": "5cbc807620b3fc0044b52e59293c1aadb4c607ca0a42b2d1e62c265ab7855d97"
+        },
+        {
+          "index": 7,
+          "performance_ms": 9747.7,
+          "text_length": 2443,
+          "text_sha256": "809c64ff538412ec9312d1f88e4dd9da77a97abc3981ca179861fb6d5bf25215"
+        },
+        {
+          "index": 8,
+          "performance_ms": 10753,
+          "text_length": 2443,
+          "text_sha256": "02e606b5130e15b6b79cdea6d47d16553e3ade20d403487573848e0141407730"
+        },
+        {
+          "index": 9,
+          "performance_ms": 11757.1,
+          "text_length": 2443,
+          "text_sha256": "6bfcb071eb87e593d6150f7369ec5cbf7b66d7815eba070ab53527f974427e00"
+        }
+      ],
+      "object_counts": {
+        "collectibles": 1,
+        "fixtures": 5,
+        "plants": 5,
+        "relationship_animals": 1
+      },
+      "page_errors": [],
+      "reduced_motion": false,
+      "title": "your quiet standalone garden.",
+      "unique_dom_sample_count": 10
+    }
+  },
+  "git": {
+    "dirty": true,
+    "sha": "b274797271f0ee7bdc83151e7b3b88c42c148d7e"
+  },
+  "media_validation": {
+    "desktop_master": {
+      "checks": [
+        {
+          "expected": [
+            1600,
+            1000
+          ],
+          "name": "master dimensions",
+          "observed": [
+            1600,
+            1000
+          ],
+          "passed": true
+        },
+        {
+          "expected": 10.0,
+          "name": "master duration",
+          "observed": 10.0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "probe": {
+        "format": {
+          "duration": "10.000000"
+        },
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "avg_frame_rate": "25/1",
+            "height": 1000,
+            "r_frame_rate": "25/1",
+            "width": 1600
+          }
+        ]
+      }
+    },
+    "gif": {
+      "checks": [
+        {
+          "expected": [
+            960,
+            600
+          ],
+          "name": "gif dimensions",
+          "observed": [
+            960,
+            600
+          ],
+          "passed": true
+        },
+        {
+          "expected": 10,
+          "name": "gif fps",
+          "observed": 10.0,
+          "passed": true
+        },
+        {
+          "expected": 10.0,
+          "name": "gif duration",
+          "observed": 10.0,
+          "passed": true
+        },
+        {
+          "expected": 100,
+          "name": "gif frame count",
+          "observed": 100,
+          "passed": true
+        },
+        {
+          "expected": 0,
+          "name": "gif loops forever",
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "expected": ">=30",
+          "name": "gif has unique motion frames",
+          "observed": 100,
+          "passed": true
+        }
+      ],
+      "frame_count": 100,
+      "loop_count": 0,
+      "passed": true,
+      "probe": {
+        "format": {
+          "duration": "10.000000"
+        },
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "avg_frame_rate": "10/1",
+            "duration": "10.000000",
+            "height": 600,
+            "nb_frames": "100",
+            "r_frame_rate": "10/1",
+            "width": 960
+          }
+        ]
+      },
+      "unique_frame_count": 100
+    },
+    "mobile_master": {
+      "checks": [
+        {
+          "expected": [
+            390,
+            844
+          ],
+          "name": "master dimensions",
+          "observed": [
+            390,
+            844
+          ],
+          "passed": true
+        },
+        {
+          "expected": 10.0,
+          "name": "master duration",
+          "observed": 10.0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "probe": {
+        "format": {
+          "duration": "10.000000"
+        },
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "avg_frame_rate": "25/1",
+            "height": 844,
+            "r_frame_rate": "25/1",
+            "width": 390
+          }
+        ]
+      }
+    }
+  },
+  "operator_signoff_required": true,
+  "review_status": "candidate_only",
+  "schema_version": 1,
+  "settings": {
+    "browser": "system Google Chrome via Playwright channel=chrome",
+    "desktop": {
+      "height": 1000,
+      "width": 1600
+    },
+    "duration_seconds": 10.0,
+    "gif": {
+      "height": 600,
+      "width": 960
+    },
+    "gif_fps": 10,
+    "min_unique_dom_samples": 5,
+    "min_unique_gif_frames": 30,
+    "mobile": {
+      "height": 844,
+      "width": 390
+    },
+    "sample_count": 10,
+    "warmup_seconds": 2.0
+  },
+  "url": "http://127.0.0.1:8772/viewer-bnw.html",
+  "validation": {
+    "checks": [
+      {
+        "expected": ">=10",
+        "name": "desktop sampled Garden text",
+        "observed": 10,
+        "passed": true
+      },
+      {
+        "expected": ">=5",
+        "name": "desktop Garden DOM moved",
+        "observed": 10,
+        "passed": true
+      },
+      {
+        "expected": false,
+        "name": "desktop reduced motion disabled",
+        "observed": false,
+        "passed": true
+      },
+      {
+        "expected": [],
+        "name": "desktop page errors",
+        "observed": [],
+        "passed": true
+      },
+      {
+        "expected": [],
+        "name": "desktop console errors",
+        "observed": [],
+        "passed": true
+      },
+      {
+        "expected": [],
+        "name": "desktop bad responses",
+        "observed": [],
+        "passed": true
+      },
+      {
+        "expected": "all four canonical object-kind counts",
+        "name": "desktop ARIA object counts",
+        "observed": {
+          "collectibles": 1,
+          "fixtures": 5,
+          "plants": 5,
+          "relationship_animals": 1
+        },
+        "passed": true
+      },
+      {
+        "expected": ">=10",
+        "name": "mobile sampled Garden text",
+        "observed": 10,
+        "passed": true
+      },
+      {
+        "expected": ">=5",
+        "name": "mobile Garden DOM moved",
+        "observed": 10,
+        "passed": true
+      },
+      {
+        "expected": false,
+        "name": "mobile reduced motion disabled",
+        "observed": false,
+        "passed": true
+      },
+      {
+        "expected": [],
+        "name": "mobile page errors",
+        "observed": [],
+        "passed": true
+      },
+      {
+        "expected": [],
+        "name": "mobile console errors",
+        "observed": [],
+        "passed": true
+      },
+      {
+        "expected": [],
+        "name": "mobile bad responses",
+        "observed": [],
+        "passed": true
+      },
+      {
+        "expected": "all four canonical object-kind counts",
+        "name": "mobile ARIA object counts",
+        "observed": {
+          "collectibles": 1,
+          "fixtures": 5,
+          "plants": 5,
+          "relationship_animals": 1
+        },
+        "passed": true
+      },
+      {
+        "expected": [
+          1600,
+          1000
+        ],
+        "name": "master dimensions",
+        "observed": [
+          1600,
+          1000
+        ],
+        "passed": true
+      },
+      {
+        "expected": 10.0,
+        "name": "master duration",
+        "observed": 10.0,
+        "passed": true
+      },
+      {
+        "expected": [
+          390,
+          844
+        ],
+        "name": "master dimensions",
+        "observed": [
+          390,
+          844
+        ],
+        "passed": true
+      },
+      {
+        "expected": 10.0,
+        "name": "master duration",
+        "observed": 10.0,
+        "passed": true
+      },
+      {
+        "expected": [
+          960,
+          600
+        ],
+        "name": "gif dimensions",
+        "observed": [
+          960,
+          600
+        ],
+        "passed": true
+      },
+      {
+        "expected": 10,
+        "name": "gif fps",
+        "observed": 10.0,
+        "passed": true
+      },
+      {
+        "expected": 10.0,
+        "name": "gif duration",
+        "observed": 10.0,
+        "passed": true
+      },
+      {
+        "expected": 100,
+        "name": "gif frame count",
+        "observed": 100,
+        "passed": true
+      },
+      {
+        "expected": 0,
+        "name": "gif loops forever",
+        "observed": 0,
+        "passed": true
+      },
+      {
+        "expected": ">=30",
+        "name": "gif has unique motion frames",
+        "observed": 100,
+        "passed": true
+      },
+      {
+        "expected": "identical counts",
+        "name": "desktop and mobile object counts agree",
+        "observed": {
+          "desktop": {
+            "collectibles": 1,
+            "fixtures": 5,
+            "plants": 5,
+            "relationship_animals": 1
+          },
+          "mobile": {
+            "collectibles": 1,
+            "fixtures": 5,
+            "plants": 5,
+            "relationship_animals": 1
+          }
+        },
+        "passed": true
+      }
+    ],
+    "passed": true
+  }
+}

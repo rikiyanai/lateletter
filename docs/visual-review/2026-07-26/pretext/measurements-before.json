@@ -1,0 +1,1087 @@
+{
+  "label": "before",
+  "viewports": {
+    "desktop": {
+      "textLayoutMode": "pretext",
+      "computed": {
+        "fontSize": "13px",
+        "lineHeight": "21.45px",
+        "fontFamily": "\"Times New Roman\", Times, serif",
+        "fontWeight": "400",
+        "fontStyle": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "columnWidth": 460,
+      "clientWidth": 460,
+      "rowCount": 7,
+      "rows": [
+        {
+          "index": 0,
+          "justified": false,
+          "text": "Dear friend,",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 122.8125,
+          "shortfall": 397.1875
+        },
+        {
+          "index": 1,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 460,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 2,
+          "justified": true,
+          "text": "This is fictional sample text for testing LateLetter. Replace this entire example with",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 520.09375,
+          "shortfall": -0.09375
+        },
+        {
+          "index": 3,
+          "justified": false,
+          "text": "your own words in a separate, ignored source file before sealing a real letter.",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 457.4375,
+          "shortfall": 62.5625
+        },
+        {
+          "index": 4,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 460,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 5,
+          "justified": false,
+          "text": "With care,",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 113.625,
+          "shortfall": 406.375
+        },
+        {
+          "index": 6,
+          "justified": false,
+          "text": "Demo Author",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 131.140625,
+          "shortfall": 388.859375
+        }
+      ],
+      "console": [],
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    "narrow": {
+      "textLayoutMode": "pretext",
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "19.8px",
+        "fontFamily": "\"Times New Roman\", Times, serif",
+        "fontWeight": "400",
+        "fontStyle": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "columnWidth": 337,
+      "clientWidth": 337,
+      "rowCount": 8,
+      "rows": [
+        {
+          "index": 0,
+          "justified": false,
+          "text": "Dear friend,",
+          "blank": false,
+          "height": 19.796875,
+          "width": 336.890625,
+          "paintedRight": 87.96875,
+          "shortfall": 279.03125
+        },
+        {
+          "index": 1,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 336.890625,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 2,
+          "justified": true,
+          "text": "This is fictional sample text for testing LateLetter. Replace this",
+          "blank": false,
+          "height": 19.796875,
+          "width": 336.890625,
+          "paintedRight": 344.046875,
+          "shortfall": 22.953125
+        },
+        {
+          "index": 3,
+          "justified": true,
+          "text": "entire example with your own words in a separate, ignored",
+          "blank": false,
+          "height": 19.796875,
+          "width": 336.890625,
+          "paintedRight": 345.734375,
+          "shortfall": 21.265625
+        },
+        {
+          "index": 4,
+          "justified": false,
+          "text": "source file before sealing a real letter.",
+          "blank": false,
+          "height": 19.796875,
+          "width": 336.890625,
+          "paintedRight": 210.25,
+          "shortfall": 156.75
+        },
+        {
+          "index": 5,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 336.890625,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 6,
+          "justified": false,
+          "text": "With care,",
+          "blank": false,
+          "height": 19.796875,
+          "width": 336.890625,
+          "paintedRight": 79.5,
+          "shortfall": 287.5
+        },
+        {
+          "index": 7,
+          "justified": false,
+          "text": "Demo Author",
+          "blank": false,
+          "height": 19.796875,
+          "width": 336.890625,
+          "paintedRight": 95.671875,
+          "shortfall": 271.328125
+        }
+      ],
+      "console": [],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    "w1024": {
+      "textLayoutMode": "pretext",
+      "computed": {
+        "fontSize": "13px",
+        "lineHeight": "21.45px",
+        "fontFamily": "\"Times New Roman\", Times, serif",
+        "fontWeight": "400",
+        "fontStyle": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "columnWidth": 460,
+      "clientWidth": 460,
+      "rowCount": 7,
+      "rows": [
+        {
+          "index": 0,
+          "justified": false,
+          "text": "Dear friend,",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 122.8125,
+          "shortfall": 397.1875
+        },
+        {
+          "index": 1,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 460,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 2,
+          "justified": true,
+          "text": "This is fictional sample text for testing LateLetter. Replace this entire example with",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 520.09375,
+          "shortfall": -0.09375
+        },
+        {
+          "index": 3,
+          "justified": false,
+          "text": "your own words in a separate, ignored source file before sealing a real letter.",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 457.4375,
+          "shortfall": 62.5625
+        },
+        {
+          "index": 4,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 460,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 5,
+          "justified": false,
+          "text": "With care,",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 113.625,
+          "shortfall": 406.375
+        },
+        {
+          "index": 6,
+          "justified": false,
+          "text": "Demo Author",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 131.140625,
+          "shortfall": 388.859375
+        }
+      ],
+      "console": [],
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      }
+    },
+    "w834": {
+      "textLayoutMode": "pretext",
+      "computed": {
+        "fontSize": "13px",
+        "lineHeight": "21.45px",
+        "fontFamily": "\"Times New Roman\", Times, serif",
+        "fontWeight": "400",
+        "fontStyle": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "columnWidth": 460,
+      "clientWidth": 460,
+      "rowCount": 7,
+      "rows": [
+        {
+          "index": 0,
+          "justified": false,
+          "text": "Dear friend,",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 122.8125,
+          "shortfall": 397.1875
+        },
+        {
+          "index": 1,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 460,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 2,
+          "justified": true,
+          "text": "This is fictional sample text for testing LateLetter. Replace this entire example with",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 520.09375,
+          "shortfall": -0.09375
+        },
+        {
+          "index": 3,
+          "justified": false,
+          "text": "your own words in a separate, ignored source file before sealing a real letter.",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 457.4375,
+          "shortfall": 62.5625
+        },
+        {
+          "index": 4,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 460,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 5,
+          "justified": false,
+          "text": "With care,",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 113.625,
+          "shortfall": 406.375
+        },
+        {
+          "index": 6,
+          "justified": false,
+          "text": "Demo Author",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 131.140625,
+          "shortfall": 388.859375
+        }
+      ],
+      "console": [],
+      "viewport": {
+        "width": 834,
+        "height": 1112
+      }
+    },
+    "w768": {
+      "textLayoutMode": "pretext",
+      "computed": {
+        "fontSize": "13px",
+        "lineHeight": "21.45px",
+        "fontFamily": "\"Times New Roman\", Times, serif",
+        "fontWeight": "400",
+        "fontStyle": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "columnWidth": 460,
+      "clientWidth": 460,
+      "rowCount": 7,
+      "rows": [
+        {
+          "index": 0,
+          "justified": false,
+          "text": "Dear friend,",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 122.8125,
+          "shortfall": 397.1875
+        },
+        {
+          "index": 1,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 460,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 2,
+          "justified": true,
+          "text": "This is fictional sample text for testing LateLetter. Replace this entire example with",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 520.09375,
+          "shortfall": -0.09375
+        },
+        {
+          "index": 3,
+          "justified": false,
+          "text": "your own words in a separate, ignored source file before sealing a real letter.",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 457.4375,
+          "shortfall": 62.5625
+        },
+        {
+          "index": 4,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 460,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 5,
+          "justified": false,
+          "text": "With care,",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 113.625,
+          "shortfall": 406.375
+        },
+        {
+          "index": 6,
+          "justified": false,
+          "text": "Demo Author",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 131.140625,
+          "shortfall": 388.859375
+        }
+      ],
+      "console": [],
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      }
+    },
+    "w600": {
+      "textLayoutMode": "pretext",
+      "computed": {
+        "fontSize": "13px",
+        "lineHeight": "21.45px",
+        "fontFamily": "\"Times New Roman\", Times, serif",
+        "fontWeight": "400",
+        "fontStyle": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "columnWidth": 460,
+      "clientWidth": 460,
+      "rowCount": 7,
+      "rows": [
+        {
+          "index": 0,
+          "justified": false,
+          "text": "Dear friend,",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 122.8125,
+          "shortfall": 397.1875
+        },
+        {
+          "index": 1,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 460,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 2,
+          "justified": true,
+          "text": "This is fictional sample text for testing LateLetter. Replace this entire example with",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 520.09375,
+          "shortfall": -0.09375
+        },
+        {
+          "index": 3,
+          "justified": false,
+          "text": "your own words in a separate, ignored source file before sealing a real letter.",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 457.4375,
+          "shortfall": 62.5625
+        },
+        {
+          "index": 4,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 460,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 5,
+          "justified": false,
+          "text": "With care,",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 113.625,
+          "shortfall": 406.375
+        },
+        {
+          "index": 6,
+          "justified": false,
+          "text": "Demo Author",
+          "blank": false,
+          "height": 21.4375,
+          "width": 460,
+          "paintedRight": 131.140625,
+          "shortfall": 388.859375
+        }
+      ],
+      "console": [],
+      "viewport": {
+        "width": 600,
+        "height": 900
+      }
+    },
+    "w481": {
+      "textLayoutMode": "pretext",
+      "computed": {
+        "fontSize": "13px",
+        "lineHeight": "21.45px",
+        "fontFamily": "\"Times New Roman\", Times, serif",
+        "fontWeight": "400",
+        "fontStyle": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "columnWidth": 363,
+      "clientWidth": 363,
+      "rowCount": 8,
+      "rows": [
+        {
+          "index": 0,
+          "justified": false,
+          "text": "Dear friend,",
+          "blank": false,
+          "height": 21.4375,
+          "width": 363.265625,
+          "paintedRight": 122.8125,
+          "shortfall": 300.1875
+        },
+        {
+          "index": 1,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 363.265625,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 2,
+          "justified": true,
+          "text": "This is fictional sample text for testing LateLetter. Replace this entire",
+          "blank": false,
+          "height": 21.4375,
+          "width": 363.265625,
+          "paintedRight": 423.078125,
+          "shortfall": -0.078125
+        },
+        {
+          "index": 3,
+          "justified": true,
+          "text": "example with your own words in a separate, ignored source file",
+          "blank": false,
+          "height": 21.4375,
+          "width": 363.265625,
+          "paintedRight": 423.078125,
+          "shortfall": -0.078125
+        },
+        {
+          "index": 4,
+          "justified": false,
+          "text": "before sealing a real letter.",
+          "blank": false,
+          "height": 21.4375,
+          "width": 363.265625,
+          "paintedRight": 197.515625,
+          "shortfall": 225.484375
+        },
+        {
+          "index": 5,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 363.265625,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 6,
+          "justified": false,
+          "text": "With care,",
+          "blank": false,
+          "height": 21.4375,
+          "width": 363.265625,
+          "paintedRight": 113.625,
+          "shortfall": 309.375
+        },
+        {
+          "index": 7,
+          "justified": false,
+          "text": "Demo Author",
+          "blank": false,
+          "height": 21.4375,
+          "width": 363.265625,
+          "paintedRight": 131.140625,
+          "shortfall": 291.859375
+        }
+      ],
+      "console": [],
+      "viewport": {
+        "width": 481,
+        "height": 900
+      }
+    },
+    "w480": {
+      "textLayoutMode": "pretext",
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "19.8px",
+        "fontFamily": "\"Times New Roman\", Times, serif",
+        "fontWeight": "400",
+        "fontStyle": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "columnWidth": 423,
+      "clientWidth": 423,
+      "rowCount": 8,
+      "rows": [
+        {
+          "index": 0,
+          "justified": false,
+          "text": "Dear friend,",
+          "blank": false,
+          "height": 19.796875,
+          "width": 423.296875,
+          "paintedRight": 87.96875,
+          "shortfall": 365.03125
+        },
+        {
+          "index": 1,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 423.296875,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 2,
+          "justified": true,
+          "text": "This is fictional sample text for testing LateLetter. Replace this entire example",
+          "blank": false,
+          "height": 19.796875,
+          "width": 423.296875,
+          "paintedRight": 424.34375,
+          "shortfall": 28.65625
+        },
+        {
+          "index": 3,
+          "justified": true,
+          "text": "with your own words in a separate, ignored source file before sealing a real",
+          "blank": false,
+          "height": 19.796875,
+          "width": 423.296875,
+          "paintedRight": 426.234375,
+          "shortfall": 26.765625
+        },
+        {
+          "index": 4,
+          "justified": false,
+          "text": "letter.",
+          "blank": false,
+          "height": 19.796875,
+          "width": 423.296875,
+          "paintedRight": 57,
+          "shortfall": 396
+        },
+        {
+          "index": 5,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 423.296875,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 6,
+          "justified": false,
+          "text": "With care,",
+          "blank": false,
+          "height": 19.796875,
+          "width": 423.296875,
+          "paintedRight": 79.5,
+          "shortfall": 373.5
+        },
+        {
+          "index": 7,
+          "justified": false,
+          "text": "Demo Author",
+          "blank": false,
+          "height": 19.796875,
+          "width": 423.296875,
+          "paintedRight": 95.671875,
+          "shortfall": 357.328125
+        }
+      ],
+      "console": [],
+      "viewport": {
+        "width": 480,
+        "height": 900
+      }
+    },
+    "w430": {
+      "textLayoutMode": "pretext",
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "19.8px",
+        "fontFamily": "\"Times New Roman\", Times, serif",
+        "fontWeight": "400",
+        "fontStyle": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "columnWidth": 375,
+      "clientWidth": 375,
+      "rowCount": 8,
+      "rows": [
+        {
+          "index": 0,
+          "justified": false,
+          "text": "Dear friend,",
+          "blank": false,
+          "height": 19.796875,
+          "width": 375.296875,
+          "paintedRight": 87.96875,
+          "shortfall": 317.03125
+        },
+        {
+          "index": 1,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 375.296875,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 2,
+          "justified": true,
+          "text": "This is fictional sample text for testing LateLetter. Replace this entire",
+          "blank": false,
+          "height": 19.796875,
+          "width": 375.296875,
+          "paintedRight": 379.703125,
+          "shortfall": 25.296875
+        },
+        {
+          "index": 3,
+          "justified": true,
+          "text": "example with your own words in a separate, ignored source file before",
+          "blank": false,
+          "height": 19.796875,
+          "width": 375.296875,
+          "paintedRight": 379.46875,
+          "shortfall": 25.53125
+        },
+        {
+          "index": 4,
+          "justified": false,
+          "text": "sealing a real letter.",
+          "blank": false,
+          "height": 19.796875,
+          "width": 375.296875,
+          "paintedRight": 123.296875,
+          "shortfall": 281.703125
+        },
+        {
+          "index": 5,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 375.296875,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 6,
+          "justified": false,
+          "text": "With care,",
+          "blank": false,
+          "height": 19.796875,
+          "width": 375.296875,
+          "paintedRight": 79.5,
+          "shortfall": 325.5
+        },
+        {
+          "index": 7,
+          "justified": false,
+          "text": "Demo Author",
+          "blank": false,
+          "height": 19.796875,
+          "width": 375.296875,
+          "paintedRight": 95.671875,
+          "shortfall": 309.328125
+        }
+      ],
+      "console": [],
+      "viewport": {
+        "width": 430,
+        "height": 932
+      }
+    },
+    "w360": {
+      "textLayoutMode": "pretext",
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "19.8px",
+        "fontFamily": "\"Times New Roman\", Times, serif",
+        "fontWeight": "400",
+        "fontStyle": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "columnWidth": 316,
+      "clientWidth": 316,
+      "rowCount": 8,
+      "rows": [
+        {
+          "index": 0,
+          "justified": false,
+          "text": "Dear friend,",
+          "blank": false,
+          "height": 19.796875,
+          "width": 315.59375,
+          "paintedRight": 84.21875,
+          "shortfall": 258.03125
+        },
+        {
+          "index": 1,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 315.59375,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 2,
+          "justified": true,
+          "text": "This is fictional sample text for testing LateLetter. Replace",
+          "blank": false,
+          "height": 19.796875,
+          "width": 315.59375,
+          "paintedRight": 320.6875,
+          "shortfall": 21.5625
+        },
+        {
+          "index": 3,
+          "justified": true,
+          "text": "this entire example with your own words in a separate,",
+          "blank": false,
+          "height": 19.796875,
+          "width": 315.59375,
+          "paintedRight": 322.671875,
+          "shortfall": 19.578125
+        },
+        {
+          "index": 4,
+          "justified": false,
+          "text": "ignored source file before sealing a real letter.",
+          "blank": false,
+          "height": 19.796875,
+          "width": 315.59375,
+          "paintedRight": 246.15625,
+          "shortfall": 96.09375
+        },
+        {
+          "index": 5,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 315.59375,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 6,
+          "justified": false,
+          "text": "With care,",
+          "blank": false,
+          "height": 19.796875,
+          "width": 315.59375,
+          "paintedRight": 75.75,
+          "shortfall": 266.5
+        },
+        {
+          "index": 7,
+          "justified": false,
+          "text": "Demo Author",
+          "blank": false,
+          "height": 19.796875,
+          "width": 315.59375,
+          "paintedRight": 91.921875,
+          "shortfall": 250.328125
+        }
+      ],
+      "console": [],
+      "viewport": {
+        "width": 360,
+        "height": 740
+      }
+    },
+    "w320": {
+      "textLayoutMode": "pretext",
+      "computed": {
+        "fontSize": "12px",
+        "lineHeight": "19.8px",
+        "fontFamily": "\"Times New Roman\", Times, serif",
+        "fontWeight": "400",
+        "fontStyle": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px"
+      },
+      "columnWidth": 277,
+      "clientWidth": 277,
+      "rowCount": 9,
+      "rows": [
+        {
+          "index": 0,
+          "justified": false,
+          "text": "Dear friend,",
+          "blank": false,
+          "height": 19.796875,
+          "width": 277.1875,
+          "paintedRight": 84.21875,
+          "shortfall": 219.03125
+        },
+        {
+          "index": 1,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 277.1875,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 2,
+          "justified": true,
+          "text": "This is fictional sample text for testing LateLetter.",
+          "blank": false,
+          "height": 19.796875,
+          "width": 277.1875,
+          "paintedRight": 284.953125,
+          "shortfall": 18.296875
+        },
+        {
+          "index": 3,
+          "justified": true,
+          "text": "Replace this entire example with your own words in",
+          "blank": false,
+          "height": 19.796875,
+          "width": 277.1875,
+          "paintedRight": 284.4375,
+          "shortfall": 18.8125
+        },
+        {
+          "index": 4,
+          "justified": true,
+          "text": "a separate, ignored source file before sealing a real",
+          "blank": false,
+          "height": 19.796875,
+          "width": 277.1875,
+          "paintedRight": 284.96875,
+          "shortfall": 18.28125
+        },
+        {
+          "index": 5,
+          "justified": false,
+          "text": "letter.",
+          "blank": false,
+          "height": 19.796875,
+          "width": 277.1875,
+          "paintedRight": 53.25,
+          "shortfall": 250
+        },
+        {
+          "index": 6,
+          "justified": false,
+          "text": "",
+          "blank": true,
+          "height": 0,
+          "width": 277.1875,
+          "paintedRight": null,
+          "shortfall": null
+        },
+        {
+          "index": 7,
+          "justified": false,
+          "text": "With care,",
+          "blank": false,
+          "height": 19.796875,
+          "width": 277.1875,
+          "paintedRight": 75.75,
+          "shortfall": 227.5
+        },
+        {
+          "index": 8,
+          "justified": false,
+          "text": "Demo Author",
+          "blank": false,
+          "height": 19.796875,
+          "width": 277.1875,
+          "paintedRight": 91.921875,
+          "shortfall": 211.328125
+        }
+      ],
+      "console": [],
+      "viewport": {
+        "width": 320,
+        "height": 568
+      }
+    }
+  }
+}

@@ -1,0 +1,535 @@
+{
+  "acceptance_claim": false,
+  "artifacts": {
+    "desktop_master": {
+      "bytes": 167884,
+      "path": "/Users/r/Projects/LateLetter/docs/visual-review/2026-08-31/lateletter-readme-system-chrome/legacy-viewer-motion-desktop-1600x1000.webm",
+      "sha256": "68965e643948248f645ef7b30890f5ef3c54e07fd556fa4d735f68defdd006fa"
+    },
+    "desktop_still": {
+      "bytes": 49467,
+      "path": "/Users/r/Projects/LateLetter/docs/visual-review/2026-08-31/lateletter-readme-system-chrome/legacy-viewer-motion-desktop-1600x1000.png",
+      "sha256": "11c600d0b4acd0d3c423927c3e2757fc88a162c43ab14dfc5fb5ef15ad64316d"
+    },
+    "gif": {
+      "bytes": 272490,
+      "path": "/Users/r/Projects/LateLetter/docs/visual-review/2026-08-31/lateletter-readme-system-chrome/legacy-viewer-motion-desktop-960x600.gif",
+      "sha256": "01017a3cbd3afdd7f54999f4a9c2ae06b5069e91f26a469d4c496f41889d6f46"
+    },
+    "mobile_master": {
+      "bytes": 70501,
+      "path": "/Users/r/Projects/LateLetter/docs/visual-review/2026-08-31/lateletter-readme-system-chrome/legacy-viewer-motion-mobile-390x844.webm",
+      "sha256": "7e26b85fd85821a2bb44a0453af7ffcd5eb767f78fc23d0ccfb103cca97d6614"
+    },
+    "mobile_still": {
+      "bytes": 19933,
+      "path": "/Users/r/Projects/LateLetter/docs/visual-review/2026-08-31/lateletter-readme-system-chrome/legacy-viewer-motion-mobile-390x844.png",
+      "sha256": "7dbf2d3d8f2831324842e91d02375ab5be15efd78a69bd747226062001e2935b"
+    }
+  },
+  "captured_at_utc": "2026-08-31T20:52:34.800729+00:00",
+  "captures": {
+    "desktop": {
+      "aria_label": null,
+      "bad_responses": [],
+      "console_errors": [],
+      "dimensions": {
+        "height": 1000,
+        "width": 1600
+      },
+      "dom_samples": [
+        {
+          "index": 0,
+          "performance_ms": 3204.6,
+          "text_length": 13595,
+          "text_sha256": "486cc492632ea92a02cb95cfda201e07652569ad938509a59e5a806d649510d3"
+        },
+        {
+          "index": 1,
+          "performance_ms": 4219.1,
+          "text_length": 13595,
+          "text_sha256": "88a0761c6be0b564677bc99b8ed51b72db94cca1bcb06931df6050869845d233"
+        },
+        {
+          "index": 2,
+          "performance_ms": 5227.6,
+          "text_length": 13595,
+          "text_sha256": "efd7f5e79baceac7985d1c297bd6e41c5562679a4d8fc621ce3ce766472a5ae3"
+        },
+        {
+          "index": 3,
+          "performance_ms": 6236.5,
+          "text_length": 13595,
+          "text_sha256": "2d171d0f9b12ef9ba18ea7f2e73bdee41d5e3182bbd8e6e2768e0c9cf8d694d4"
+        },
+        {
+          "index": 4,
+          "performance_ms": 7244.7,
+          "text_length": 13595,
+          "text_sha256": "cf2913009174e529900b744f591d8721f019983aeff6ff3288b730a5481cd6c8"
+        },
+        {
+          "index": 5,
+          "performance_ms": 8253.7,
+          "text_length": 13595,
+          "text_sha256": "424a7fcc4bd42f00dda031fa0f4094e97b56a6c0d81f041c44314c26c9606053"
+        },
+        {
+          "index": 6,
+          "performance_ms": 9260.3,
+          "text_length": 13595,
+          "text_sha256": "f3fa4fd62c27545d71fc95d0dbee589ecab14fce357683f04ec8623f6bf3238d"
+        },
+        {
+          "index": 7,
+          "performance_ms": 10268.1,
+          "text_length": 13595,
+          "text_sha256": "f1760235b2d1ae4a3b75b024506d0a2dd3904f8114380dd34ce392f69a2f5424"
+        },
+        {
+          "index": 8,
+          "performance_ms": 11277.9,
+          "text_length": 13595,
+          "text_sha256": "17cdaf10eba4d5af32196d797c02199edbc1a697c9b11e76c7a40f17d8f22019"
+        },
+        {
+          "index": 9,
+          "performance_ms": 12284.7,
+          "text_length": 13595,
+          "text_sha256": "27d22b90deaf13b6b17c83776c11ea03fe8de4a1f5916b1704e52bf545a0f6fb"
+        }
+      ],
+      "object_counts": {},
+      "page_errors": [],
+      "reduced_motion": false,
+      "title": "planted for you by Buddy.",
+      "unique_dom_sample_count": 10
+    },
+    "mobile": {
+      "aria_label": null,
+      "bad_responses": [],
+      "console_errors": [],
+      "dimensions": {
+        "height": 844,
+        "width": 390
+      },
+      "dom_samples": [
+        {
+          "index": 0,
+          "performance_ms": 2762.9,
+          "text_length": 3839,
+          "text_sha256": "e31b2f42f3d577c21806c5cd2aefad3a71506221cc7cafa488722f751e783daf"
+        },
+        {
+          "index": 1,
+          "performance_ms": 3774.7,
+          "text_length": 3839,
+          "text_sha256": "6650661fffdd2e63d2ebf3990a7cd6618884bc62a5ece18c1b114eaef70ad446"
+        },
+        {
+          "index": 2,
+          "performance_ms": 4783.9,
+          "text_length": 3839,
+          "text_sha256": "faf2bac7ec6073ff787a3cac4d51b10dd12426006a32f18acba8ae59048eb747"
+        },
+        {
+          "index": 3,
+          "performance_ms": 5791.1,
+          "text_length": 3839,
+          "text_sha256": "3085c1f602f67a81637513e4c7f2b1bc5cefcddabbed166b6837f95cd4a578f3"
+        },
+        {
+          "index": 4,
+          "performance_ms": 6797.8,
+          "text_length": 3839,
+          "text_sha256": "4b95e8265a471f7030004966c5972f50fbc5a31cb53e21fbbec3b7ea9c46b191"
+        },
+        {
+          "index": 5,
+          "performance_ms": 7804.6,
+          "text_length": 3839,
+          "text_sha256": "428d288c7a9298c1cc6178af033dab0d64ddcda4839f533285eae2b943016a4d"
+        },
+        {
+          "index": 6,
+          "performance_ms": 8810.3,
+          "text_length": 3839,
+          "text_sha256": "bb23f5aca4c29768557512ac86f791bdf67ab3f52b414c426dcd19ec0d4fff76"
+        },
+        {
+          "index": 7,
+          "performance_ms": 9822,
+          "text_length": 3839,
+          "text_sha256": "e29bbb50fde1251e0697e1ce715a8809c1a8ea4c5fa708411024ff7c6e15ea27"
+        },
+        {
+          "index": 8,
+          "performance_ms": 10829,
+          "text_length": 3839,
+          "text_sha256": "33e830599e52c49c1d3b8b811a46f891a603d0f50835918913168c2d2f2ad13c"
+        },
+        {
+          "index": 9,
+          "performance_ms": 11846.2,
+          "text_length": 3839,
+          "text_sha256": "5239ecd0d875d4de3aa3003bfa0255b65e37f1952ac53b31cb4d048b8088af2d"
+        }
+      ],
+      "object_counts": {},
+      "page_errors": [],
+      "reduced_motion": false,
+      "title": "planted for you by Buddy.",
+      "unique_dom_sample_count": 10
+    }
+  },
+  "git": {
+    "dirty": true,
+    "sha": "0cb08589092739950df4c349d3205f85494228e1"
+  },
+  "media_validation": {
+    "desktop_master": {
+      "checks": [
+        {
+          "expected": [
+            1600,
+            1000
+          ],
+          "name": "master dimensions",
+          "observed": [
+            1600,
+            1000
+          ],
+          "passed": true
+        },
+        {
+          "expected": 10.0,
+          "name": "master duration",
+          "observed": 10.0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "probe": {
+        "format": {
+          "duration": "10.000000"
+        },
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "avg_frame_rate": "25/1",
+            "height": 1000,
+            "r_frame_rate": "25/1",
+            "width": 1600
+          }
+        ]
+      }
+    },
+    "gif": {
+      "checks": [
+        {
+          "expected": [
+            960,
+            600
+          ],
+          "name": "gif dimensions",
+          "observed": [
+            960,
+            600
+          ],
+          "passed": true
+        },
+        {
+          "expected": 10,
+          "name": "gif fps",
+          "observed": 10.0,
+          "passed": true
+        },
+        {
+          "expected": 10.0,
+          "name": "gif duration",
+          "observed": 10.0,
+          "passed": true
+        },
+        {
+          "expected": 100,
+          "name": "gif frame count",
+          "observed": 100,
+          "passed": true
+        },
+        {
+          "expected": 0,
+          "name": "gif loops forever",
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "expected": ">=30",
+          "name": "gif has unique motion frames",
+          "observed": 91,
+          "passed": true
+        }
+      ],
+      "frame_count": 100,
+      "loop_count": 0,
+      "passed": true,
+      "probe": {
+        "format": {
+          "duration": "10.000000"
+        },
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "avg_frame_rate": "10/1",
+            "duration": "10.000000",
+            "height": 600,
+            "nb_frames": "100",
+            "r_frame_rate": "10/1",
+            "width": 960
+          }
+        ]
+      },
+      "unique_frame_count": 91
+    },
+    "mobile_master": {
+      "checks": [
+        {
+          "expected": [
+            390,
+            844
+          ],
+          "name": "master dimensions",
+          "observed": [
+            390,
+            844
+          ],
+          "passed": true
+        },
+        {
+          "expected": 10.0,
+          "name": "master duration",
+          "observed": 10.0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "probe": {
+        "format": {
+          "duration": "10.000000"
+        },
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "avg_frame_rate": "25/1",
+            "height": 844,
+            "r_frame_rate": "25/1",
+            "width": 390
+          }
+        ]
+      }
+    }
+  },
+  "operator_signoff_required": true,
+  "review_status": "candidate_only",
+  "schema_version": 1,
+  "settings": {
+    "browser": "system Google Chrome via Playwright channel=chrome",
+    "desktop": {
+      "height": 1000,
+      "width": 1600
+    },
+    "duration_seconds": 10.0,
+    "gif": {
+      "height": 600,
+      "width": 960
+    },
+    "gif_fps": 10,
+    "min_unique_dom_samples": 5,
+    "min_unique_gif_frames": 30,
+    "mobile": {
+      "height": 844,
+      "width": 390
+    },
+    "sample_count": 10,
+    "warmup_seconds": 2.0
+  },
+  "url": "http://127.0.0.1:8790/legacy/viewer-bnw.html",
+  "validation": {
+    "checks": [
+      {
+        "expected": ">=10",
+        "name": "desktop sampled Garden text",
+        "observed": 10,
+        "passed": true
+      },
+      {
+        "expected": ">=5",
+        "name": "desktop Garden DOM moved",
+        "observed": 10,
+        "passed": true
+      },
+      {
+        "expected": false,
+        "name": "desktop reduced motion disabled",
+        "observed": false,
+        "passed": true
+      },
+      {
+        "expected": [],
+        "name": "desktop page errors",
+        "observed": [],
+        "passed": true
+      },
+      {
+        "expected": [],
+        "name": "desktop console errors",
+        "observed": [],
+        "passed": true
+      },
+      {
+        "expected": [],
+        "name": "desktop bad responses",
+        "observed": [],
+        "passed": true
+      },
+      {
+        "expected": "a non-empty subset of the four canonical object kinds",
+        "name": "desktop ARIA object counts",
+        "observed": {},
+        "passed": false
+      },
+      {
+        "expected": ">=10",
+        "name": "mobile sampled Garden text",
+        "observed": 10,
+        "passed": true
+      },
+      {
+        "expected": ">=5",
+        "name": "mobile Garden DOM moved",
+        "observed": 10,
+        "passed": true
+      },
+      {
+        "expected": false,
+        "name": "mobile reduced motion disabled",
+        "observed": false,
+        "passed": true
+      },
+      {
+        "expected": [],
+        "name": "mobile page errors",
+        "observed": [],
+        "passed": true
+      },
+      {
+        "expected": [],
+        "name": "mobile console errors",
+        "observed": [],
+        "passed": true
+      },
+      {
+        "expected": [],
+        "name": "mobile bad responses",
+        "observed": [],
+        "passed": true
+      },
+      {
+        "expected": "a non-empty subset of the four canonical object kinds",
+        "name": "mobile ARIA object counts",
+        "observed": {},
+        "passed": false
+      },
+      {
+        "expected": [
+          1600,
+          1000
+        ],
+        "name": "master dimensions",
+        "observed": [
+          1600,
+          1000
+        ],
+        "passed": true
+      },
+      {
+        "expected": 10.0,
+        "name": "master duration",
+        "observed": 10.0,
+        "passed": true
+      },
+      {
+        "expected": [
+          390,
+          844
+        ],
+        "name": "master dimensions",
+        "observed": [
+          390,
+          844
+        ],
+        "passed": true
+      },
+      {
+        "expected": 10.0,
+        "name": "master duration",
+        "observed": 10.0,
+        "passed": true
+      },
+      {
+        "expected": [
+          960,
+          600
+        ],
+        "name": "gif dimensions",
+        "observed": [
+          960,
+          600
+        ],
+        "passed": true
+      },
+      {
+        "expected": 10,
+        "name": "gif fps",
+        "observed": 10.0,
+        "passed": true
+      },
+      {
+        "expected": 10.0,
+        "name": "gif duration",
+        "observed": 10.0,
+        "passed": true
+      },
+      {
+        "expected": 100,
+        "name": "gif frame count",
+        "observed": 100,
+        "passed": true
+      },
+      {
+        "expected": 0,
+        "name": "gif loops forever",
+        "observed": 0,
+        "passed": true
+      },
+      {
+        "expected": ">=30",
+        "name": "gif has unique motion frames",
+        "observed": 91,
+        "passed": true
+      },
+      {
+        "expected": "identical counts",
+        "name": "desktop and mobile object counts agree",
+        "observed": {
+          "desktop": {},
+          "mobile": {}
+        },
+        "passed": true
+      }
+    ],
+    "passed": false
+  }
+}

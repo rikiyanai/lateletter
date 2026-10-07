@@ -1,0 +1,58 @@
+{
+  "claim": "operator-identified July 19 working visual state; locally reproduced from the preserved pre-rewrite snapshot",
+  "preservation_commit": "7b9389de21edb67a15b261aae25b2350b53a49a9",
+  "preservation_commit_created": "2026-07-22T02:49:11Z",
+  "viewer_blob": "59dc49a820d07d1b6a1741e17aafe6d075f6c99d",
+  "local_url": "http://127.0.0.1:8876/archive/legacy-repo-7b9389d/viewer-bnw.html",
+  "entry_action": "[get demo letter]",
+  "viewport": {
+    "width": 1280,
+    "height": 720,
+    "rows": 48
+  },
+  "verified_behaviors": {
+    "night_palette_stars_moon": true,
+    "foliage_hover_rustle": true,
+    "collision_pointer_cursor": true,
+    "click_leaf_burst": true,
+    "autumn_rain": true,
+    "winter_snow": true,
+    "spring_flowers_butterflies": true,
+    "summer_evening": true,
+    "ambient_bird_flight": true
+  },
+  "hover_probe": {
+    "cell": {
+      "column": 122,
+      "row": 36
+    },
+    "cursor_before": "crosshair",
+    "cursor_on_foliage": "pointer",
+    "before": "ooooooo",
+    "after_contains": [
+      "@",
+      "0",
+      "o"
+    ]
+  },
+  "click_probe": {
+    "target": "oak canopy",
+    "effect": "bounded leaf particles appeared at and around the clicked canopy"
+  },
+  "motion_gif": {
+    "file": "08-summer-night-working-motion-960x540-10s.gif",
+    "sha256": "a57c4f324131aaff58f0c9eb0630b64102c9cec37a75d8f4161531db87d852bd",
+    "width": 960,
+    "height": 540,
+    "fps": 10,
+    "duration_seconds": 10,
+    "decoded_frames": 100,
+    "distinct_source_frames": 96
+  },
+  "pretext": {
+    "version": "0.0.4",
+    "source": "jsDelivr CDN",
+    "letter_body_layout": true,
+    "garden_renderer": false
+  }
+}

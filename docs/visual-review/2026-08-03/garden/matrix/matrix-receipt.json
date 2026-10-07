@@ -1,0 +1,146 @@
+[
+ {
+  "cell": "spring-day",
+  "size": "desktop",
+  "utc": "2026-04-15T12:00:00Z",
+  "glyphs": 290,
+  "background": "#f9f8f5",
+  "text_sha256": "770ad5a5d909ec70",
+  "png": "spring-day-desktop.png"
+ },
+ {
+  "cell": "spring-day",
+  "size": "mobile",
+  "utc": "2026-04-15T12:00:00Z",
+  "glyphs": 54,
+  "background": "#f9f8f5",
+  "text_sha256": "3ac79ca42f5e65db",
+  "png": "spring-day-mobile.png"
+ },
+ {
+  "cell": "spring-evening",
+  "size": "desktop",
+  "utc": "2026-04-15T19:30:00Z",
+  "glyphs": 300,
+  "background": "#ecd6b6",
+  "text_sha256": "424b562676fbd269",
+  "png": "spring-evening-desktop.png"
+ },
+ {
+  "cell": "spring-evening",
+  "size": "mobile",
+  "utc": "2026-04-15T19:30:00Z",
+  "glyphs": 57,
+  "background": "#ecd6b6",
+  "text_sha256": "c04308702c8a70d8",
+  "png": "spring-evening-mobile.png"
+ },
+ {
+  "cell": "summer-day",
+  "size": "desktop",
+  "utc": "2026-07-15T12:00:00Z",
+  "glyphs": 290,
+  "background": "#f9f8f5",
+  "text_sha256": "449463192a46d502",
+  "png": "summer-day-desktop.png"
+ },
+ {
+  "cell": "summer-day",
+  "size": "mobile",
+  "utc": "2026-07-15T12:00:00Z",
+  "glyphs": 54,
+  "background": "#f9f8f5",
+  "text_sha256": "3ac79ca42f5e65db",
+  "png": "summer-day-mobile.png"
+ },
+ {
+  "cell": "summer-night",
+  "size": "desktop",
+  "utc": "2026-07-15T23:00:00Z",
+  "glyphs": 301,
+  "background": "#0b0e16",
+  "text_sha256": "496954332a43160c",
+  "png": "summer-night-desktop.png"
+ },
+ {
+  "cell": "summer-night",
+  "size": "mobile",
+  "utc": "2026-07-15T23:00:00Z",
+  "glyphs": 62,
+  "background": "#0b0e16",
+  "text_sha256": "7ceebc08e1fc2cc9",
+  "png": "summer-night-mobile.png"
+ },
+ {
+  "cell": "autumn-day",
+  "size": "desktop",
+  "utc": "2026-10-15T12:00:00Z",
+  "glyphs": 306,
+  "background": "#f9f8f5",
+  "text_sha256": "5efda5fb483e1e46",
+  "png": "autumn-day-desktop.png"
+ },
+ {
+  "cell": "autumn-day",
+  "size": "mobile",
+  "utc": "2026-10-15T12:00:00Z",
+  "glyphs": 54,
+  "background": "#f9f8f5",
+  "text_sha256": "7ed4b90c173a1d3e",
+  "png": "autumn-day-mobile.png"
+ },
+ {
+  "cell": "autumn-evening",
+  "size": "desktop",
+  "utc": "2026-10-15T18:30:00Z",
+  "glyphs": 316,
+  "background": "#ecd6b6",
+  "text_sha256": "99be1d6929154134",
+  "png": "autumn-evening-desktop.png"
+ },
+ {
+  "cell": "autumn-evening",
+  "size": "mobile",
+  "utc": "2026-10-15T18:30:00Z",
+  "glyphs": 57,
+  "background": "#ecd6b6",
+  "text_sha256": "d63756a633ed5583",
+  "png": "autumn-evening-mobile.png"
+ },
+ {
+  "cell": "winter-day",
+  "size": "desktop",
+  "utc": "2026-01-15T12:00:00Z",
+  "glyphs": 290,
+  "background": "#f9f8f5",
+  "text_sha256": "770ad5a5d909ec70",
+  "png": "winter-day-desktop.png"
+ },
+ {
+  "cell": "winter-day",
+  "size": "mobile",
+  "utc": "2026-01-15T12:00:00Z",
+  "glyphs": 54,
+  "background": "#f9f8f5",
+  "text_sha256": "3ac79ca42f5e65db",
+  "png": "winter-day-mobile.png"
+ },
+ {
+  "cell": "winter-night",
+  "size": "desktop",
+  "utc": "2026-01-15T22:00:00Z",
+  "glyphs": 304,
+  "background": "#0b0e16",
+  "text_sha256": "5d6b4f5baf523b81",
+  "png": "winter-night-desktop.png"
+ },
+ {
+  "cell": "winter-night",
+  "size": "mobile",
+  "utc": "2026-01-15T22:00:00Z",
+  "glyphs": 65,
+  "background": "#0b0e16",
+  "text_sha256": "9efd60123bf152a5",
+  "png": "winter-night-mobile.png"
+ }
+]

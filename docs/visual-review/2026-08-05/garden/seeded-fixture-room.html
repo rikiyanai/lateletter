@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LateLetter seeded fixture room — local review</title>
+<style>
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+  body { background: #f5efe3; }
+  #garden {
+    position: fixed; inset: 0; overflow: hidden;
+    font: 400 13px/15px Menlo, "DejaVu Sans Mono", Consolas, monospace;
+    user-select: none;
+  }
+  #garden > .garden-lattice-row {
+    position: relative; white-space: pre; height: 15px; overflow: visible;
+  }
+  #garden > .garden-lattice-row > span { position: absolute; top: 0; }
+  #garden > .garden-measured-layer {
+    position: absolute; inset: 0; pointer-events: none; overflow: visible;
+  }
+  #garden > .garden-measured-layer > span {
+    position: absolute; white-space: pre; line-height: 15px;
+  }
+  #review-meta {
+    position: fixed; z-index: 2; top: 10px; left: 10px;
+    padding: 6px 9px; border: 1px solid #cad0c4; border-radius: 4px;
+    background: rgb(245 239 227 / 88%); color: #3f453b;
+    font: 11px/1.35 ui-monospace, Menlo, monospace;
+    pointer-events: none;
+  }
+</style>
+<div id="garden"></div>
+<output id="review-meta" aria-live="polite"></output>
+<script type="module">
+  import { CanonicalGardenRenderer } from '../../../../web/garden-renderer.mjs';
+  import {
+    generateInitialWorld, projectGardenScene,
+  } from '../../../../web/garden-world.mjs';
+
+  const params = new URLSearchParams(location.search);
+  const seed = params.get('seed') ?? '0';
+  const authority = await fetch('../../../../web/garden-accepted-paint.v1.json', {
+    cache: 'no-store',
+  }).then(response => {
+    if (!response.ok) throw new Error(`paint authority HTTP ${response.status}`);
+    return response.json();
+  });
+  const state = await generateInitialWorld(`seeded-fixture-room:${seed}`, seed);
+  const projection = await projectGardenScene(state);
+  // Hold civil time at midday so variant shape and colour can be compared
+  // without one seed crossing a day/night boundary during the review. Motion
+  // remains live; only the environment input is fixed.
+  projection.observed_time = Date.UTC(2026, 7, 5, 12, 0, 0) / 1000;
+  const element = document.querySelector('#garden');
+  const renderer = new CanonicalGardenRenderer(element, { paintAuthority: authority });
+  renderer.setPresentationActive(true);
+  renderer.startPresentation();
+  renderer.render(projection);
+
+  const fixtures = state.fixtures.map(fixture => ({
+    catalog: fixture.catalog_id,
+    visual: fixture.authored_state.visual_asset_id,
+    position: fixture.position,
+    side: fixture.authored_state.side ?? null,
+  }));
+  document.querySelector('#review-meta').textContent =
+    `canonical seed ${seed} · midday · ${fixtures.map(item => item.visual.replace('fixture.', '')).join(' · ')}`;
+  globalThis.__gardenReview = { seed, state, projection, renderer, fixtures };
+</script>
+</html>

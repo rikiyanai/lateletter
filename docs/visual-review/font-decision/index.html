@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contract P &mdash; font decision surface</title>
+<style>
+@font-face {
+  font-family: 'LL Literata Candidate';
+  src: url('./fonts/Literata-var.ttf') format('truetype');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'LL Literata Candidate';
+  src: url('./fonts/Literata-Italic-var.ttf') format('truetype');
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: block;
+}
+@font-face {
+  font-family: 'LL EB Garamond Candidate';
+  src: url('./fonts/EBGaramond-var.ttf') format('truetype');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'LL Source Serif Candidate';
+  src: url('./fonts/SourceSerif4-var.ttf') format('truetype');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: block;
+}
+:root { color-scheme: light dark; }
+body {
+  margin: 0; padding: 2rem 1.5rem 6rem;
+  background: #12100e; color: #e8e2d9;
+  font: 15px/1.55 ui-sans-serif, system-ui, sans-serif;
+  max-width: 1180px; margin-inline: auto;
+}
+h1 { font-size: 1.5rem; margin: 0 0 .35rem; letter-spacing: -.01em; }
+h2 { font-size: 1.05rem; margin: 3rem 0 .5rem; padding-bottom: .35rem;
+      border-bottom: 1px solid #35302a; letter-spacing: .02em; }
+h3 { font-size: .95rem; margin: 1.6rem 0 .5rem; font-weight: 600; }
+p { max-width: 74ch; }
+.dim { color: #8d8478; font-size: .82em; }
+.note { color: #b6ada0; font-size: .9rem; max-width: 74ch; }
+.lede { color: #c7bfb3; }
+.warn { border-left: 3px solid #a8783c; background: #1d1813;
+         padding: .8rem 1rem; margin: 1rem 0; max-width: 74ch; }
+table { border-collapse: collapse; width: 100%; margin-top: .8rem;
+         font-size: .84rem; }
+th, td { text-align: left; padding: .5rem .6rem; vertical-align: top;
+          border-bottom: 1px solid #2b2620; }
+th { color: #9c9285; font-weight: 600; text-transform: uppercase;
+      font-size: .72rem; letter-spacing: .06em; }
+code { font-family: ui-monospace, Menlo, monospace; font-size: .92em; }
+code.hash { word-break: break-all; color: #9c9285; font-size: .78em; }
+.cov { font: 600 .95rem/1 ui-monospace, Menlo, monospace; color: #c98b52;
+        white-space: nowrap; }
+.cmp-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-start; }
+.cmp { flex: 1 1 210px; min-width: 190px; }
+.cmp-label { font-size: .76rem; color: #9c9285; margin-bottom: .35rem;
+              text-transform: uppercase; letter-spacing: .05em; }
+pre.art { margin: 0; padding: .7rem .8rem; background: #1b1712;
+           border: 1px solid #2f2a23; border-radius: 2px;
+           font-size: 15px; line-height: 1; white-space: pre;
+           overflow-x: auto; }
+pre.art.mono { font-family: 'DejaVu Sans Mono', Menlo, monospace; }
+.sizes { display: flex; gap: 1rem; flex-wrap: wrap; }
+.size-block { flex: 1 1 340px; background: #1b1712; border: 1px solid #2f2a23;
+               padding: .9rem 1rem 1rem; border-radius: 2px; }
+.size-tag { font: 600 .7rem/1 ui-sans-serif, system-ui, sans-serif;
+             color: #9c9285; letter-spacing: .06em; margin-bottom: .7rem; }
+.wrow { display: flex; gap: .7rem; align-items: baseline; margin: .18rem 0; }
+.wlabel { flex: 0 0 3.2rem; font: 400 .68rem/1 ui-monospace, monospace;
+           color: #7d7468; }
+.ramp { letter-spacing: .02em; }
+</style></head><body>
+
+<h1>Contract P &mdash; font decision surface</h1>
+<p class="lede">Choose the exact face the Garden will be drawn against. Under
+Contract P the typeface is chosen <em>before</em> the art, because proportional
+drawing is made against specific glyph advances.</p>
+
+<div class="warn">
+<strong>Everything below renders through the real candidate font binaries</strong>,
+embedded via <code>@font-face</code> from <code>./fonts/</code>. No sample is
+shown through a system font. That is deliberate: the defect this whole exercise
+exists to correct was art reviewed in one font and painted in another.
+</div>
+
+<h2>1. Provenance &mdash; the exact resources</h2>
+<p class="note">All three are SIL Open Font License 1.1 and therefore
+redistributable. Locally installed proportional faces (Georgia, Palatino,
+Optima, Baskerville, Hoefler Text) are absent from this list because they are
+system fonts that cannot legally be bundled into the product.</p>
+<table>
+<thead><tr><th>Family</th><th>File</th><th>Size</th>
+<th>Existing&nbsp;art<br>coverage</th><th>SHA-256</th>
+<th>License</th><th>CSS family</th></tr></thead>
+<tbody>
+<tr><td><strong>Literata</strong></td><td><code>Literata-var.ttf</code><br><span class='dim'>italic: Literata-Italic-var.ttf</span></td><td>932 KB</td><td class='cov'>0/12</td><td><code class='hash'>b41138c9373112f32abb589cc22e8674b06ed4048b0c513be922bdd26f274440</code></td><td>SIL OFL 1.1<br><span class='dim'>OFL-literata.txt</span></td><td><code>LL Literata Candidate</code></td></tr>
+<tr><td><strong>EB Garamond</strong></td><td><code>EBGaramond-var.ttf</code><br><span class='dim'>italic: none obtained</span></td><td>831 KB</td><td class='cov'>2/12</td><td><code class='hash'>ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027</code></td><td>SIL OFL 1.1<br><span class='dim'>OFL-ebgaramond.txt</span></td><td><code>LL EB Garamond Candidate</code></td></tr>
+<tr><td><strong>Source Serif 4</strong></td><td><code>SourceSerif4-var.ttf</code><br><span class='dim'>italic: none obtained</span></td><td>1181 KB</td><td class='cov'>0/12</td><td><code class='hash'>97b2d4da6e3cb494b5a1e66ae176914d852ccabef49e0c02c0df25f3e39aca0b</code></td><td>SIL OFL 1.1<br><span class='dim'>OFL-sourceserif4.txt</span></td><td><code>LL Source Serif Candidate</code></td></tr>
+</tbody></table>
+
+<h2>2. Candidates &mdash; raw material at both sizes</h2>
+<p class="note">This is what a proportional face offers as drawing material:
+its weight ramp, its italic, and how evenly it steps through a density
+sequence. Judge the candidates here. No proposed art is shown, because none
+exists yet &mdash; inventing some would smuggle an art-direction decision into
+a typeface decision.</p>
+<section class='candidate'><h3>Literata</h3><p class='note'>Widest tonal range of the three (weight 200-900) plus an optical size axis and a true italic. Designed for long-form reading.</p><div class='sizes'><div class='size-block' style="font-family:'LL Literata Candidate';font-size:13px;line-height:15px"><div class='size-tag'>13px / 15px</div><div class='wrow'><span class='wlabel'>200</span><span style='font-weight:200'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>300</span><span style='font-weight:300'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>400</span><span style='font-weight:400'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>500</span><span style='font-weight:500'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>600</span><span style='font-weight:600'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>700</span><span style='font-weight:700'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>800</span><span style='font-weight:800'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>900</span><span style='font-weight:900'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>italic</span><span style='font-style:italic'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>density</span><span class='ramp'><span style='font-weight:300'> .,:;i1tfLCG08@</span> <span style='font-weight:500'> .,:;i1tfLCG08@</span> <span style='font-weight:700'> .,:;i1tfLCG08@</span> <span style='font-weight:900'> .,:;i1tfLCG08@</span> </span></div></div><div class='size-block' style="font-family:'LL Literata Candidate';font-size:15px;line-height:17px"><div class='size-tag'>15px / 17px</div><div class='wrow'><span class='wlabel'>200</span><span style='font-weight:200'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>300</span><span style='font-weight:300'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>400</span><span style='font-weight:400'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>500</span><span style='font-weight:500'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>600</span><span style='font-weight:600'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>700</span><span style='font-weight:700'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>800</span><span style='font-weight:800'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>900</span><span style='font-weight:900'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>italic</span><span style='font-style:italic'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>density</span><span class='ramp'><span style='font-weight:300'> .,:;i1tfLCG08@</span> <span style='font-weight:500'> .,:;i1tfLCG08@</span> <span style='font-weight:700'> .,:;i1tfLCG08@</span> <span style='font-weight:900'> .,:;i1tfLCG08@</span> </span></div></div></div></section><section class='candidate'><h3>EB Garamond</h3><p class='note'>Classical garamond; the most letter-like and warmest of the three. Narrower weight range (400-800) means less tonal contrast available for texture.</p><div class='sizes'><div class='size-block' style="font-family:'LL EB Garamond Candidate';font-size:13px;line-height:15px"><div class='size-tag'>13px / 15px</div><div class='wrow'><span class='wlabel'>200</span><span style='font-weight:200'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>300</span><span style='font-weight:300'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>400</span><span style='font-weight:400'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>500</span><span style='font-weight:500'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>600</span><span style='font-weight:600'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>700</span><span style='font-weight:700'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>800</span><span style='font-weight:800'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>900</span><span style='font-weight:900'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>italic</span><span class='dim'>no italic obtained for this candidate</span></div><div class='wrow'><span class='wlabel'>density</span><span class='ramp'><span style='font-weight:300'> .,:;i1tfLCG08@</span> <span style='font-weight:500'> .,:;i1tfLCG08@</span> <span style='font-weight:700'> .,:;i1tfLCG08@</span> <span style='font-weight:900'> .,:;i1tfLCG08@</span> </span></div></div><div class='size-block' style="font-family:'LL EB Garamond Candidate';font-size:15px;line-height:17px"><div class='size-tag'>15px / 17px</div><div class='wrow'><span class='wlabel'>200</span><span style='font-weight:200'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>300</span><span style='font-weight:300'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>400</span><span style='font-weight:400'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>500</span><span style='font-weight:500'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>600</span><span style='font-weight:600'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>700</span><span style='font-weight:700'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>800</span><span style='font-weight:800'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>900</span><span style='font-weight:900'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>italic</span><span class='dim'>no italic obtained for this candidate</span></div><div class='wrow'><span class='wlabel'>density</span><span class='ramp'><span style='font-weight:300'> .,:;i1tfLCG08@</span> <span style='font-weight:500'> .,:;i1tfLCG08@</span> <span style='font-weight:700'> .,:;i1tfLCG08@</span> <span style='font-weight:900'> .,:;i1tfLCG08@</span> </span></div></div></div></section><section class='candidate'><h3>Source Serif 4</h3><p class='note'>Neutral and even-coloured, weight 200-900 with an optical size axis. The least characterful of the three, which can be a virtue when the art rather than the face should carry the personality.</p><div class='sizes'><div class='size-block' style="font-family:'LL Source Serif Candidate';font-size:13px;line-height:15px"><div class='size-tag'>13px / 15px</div><div class='wrow'><span class='wlabel'>200</span><span style='font-weight:200'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>300</span><span style='font-weight:300'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>400</span><span style='font-weight:400'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>500</span><span style='font-weight:500'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>600</span><span style='font-weight:600'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>700</span><span style='font-weight:700'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>800</span><span style='font-weight:800'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>900</span><span style='font-weight:900'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>italic</span><span class='dim'>no italic obtained for this candidate</span></div><div class='wrow'><span class='wlabel'>density</span><span class='ramp'><span style='font-weight:300'> .,:;i1tfLCG08@</span> <span style='font-weight:500'> .,:;i1tfLCG08@</span> <span style='font-weight:700'> .,:;i1tfLCG08@</span> <span style='font-weight:900'> .,:;i1tfLCG08@</span> </span></div></div><div class='size-block' style="font-family:'LL Source Serif Candidate';font-size:15px;line-height:17px"><div class='size-tag'>15px / 17px</div><div class='wrow'><span class='wlabel'>200</span><span style='font-weight:200'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>300</span><span style='font-weight:300'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>400</span><span style='font-weight:400'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>500</span><span style='font-weight:500'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>600</span><span style='font-weight:600'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>700</span><span style='font-weight:700'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>800</span><span style='font-weight:800'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>900</span><span style='font-weight:900'>the garden remembers every letter you never sent</span></div><div class='wrow'><span class='wlabel'>italic</span><span class='dim'>no italic obtained for this candidate</span></div><div class='wrow'><span class='wlabel'>density</span><span class='ramp'><span style='font-weight:300'> .,:;i1tfLCG08@</span> <span style='font-weight:500'> .,:;i1tfLCG08@</span> <span style='font-weight:700'> .,:;i1tfLCG08@</span> <span style='font-weight:900'> .,:;i1tfLCG08@</span> </span></div></div></div></section>
+
+<h2>3. Diagnostic &mdash; what proportional rendering does to the accepted art</h2>
+<div class="warn">
+<strong>Correction.</strong> An earlier version of this panel said the candidates
+&ldquo;shear this art equally&rdquo; because of proportional advances. That was the
+wrong mechanism. Measured against each font's <code>cmap</code>: <strong>Literata
+0/12</strong>, <strong>Source Serif 4 0/12</strong>, <strong>EB Garamond
+2/12</strong> of the twelve non-ASCII characters this art uses. The browser is
+substituting a fallback font for nearly every glyph &mdash; which is why all three
+columns below look almost identical. They are largely <em>not showing the candidate
+faces at all</em>.
+<br><br>
+What this panel actually demonstrates is per-glyph fallback: the original defect,
+reproduced under new fonts. It is still the evidence for why Contract P requires the
+ten fixtures to be <strong>redrawn</strong> rather than re-reviewed, and it still
+cannot tell the candidates apart &mdash; for a more decisive reason than first stated.
+</div>
+<h3>fixture.trellis</h3><div class='cmp-row'><div class='cmp'><div class='cmp-label'>monospace reference<br><span class='dim'>as accepted &mdash; not bundleable</span></div><pre class='art mono'> ╲╱╲╱╲╱╲╱ 
+ ╱╲╱╲╱╲╱╲ 
+ ╲╱╲╱╲╱╲╱ 
+ ╱╲╱╲╱╲╱╲ 
+ │      │ </pre></div><div class='cmp'><div class='cmp-label'>Literata<br><span class='dim'>proportional</span></div><pre class='art' style="font-family:'LL Literata Candidate'"> ╲╱╲╱╲╱╲╱ 
+ ╱╲╱╲╱╲╱╲ 
+ ╲╱╲╱╲╱╲╱ 
+ ╱╲╱╲╱╲╱╲ 
+ │      │ </pre></div><div class='cmp'><div class='cmp-label'>EB Garamond<br><span class='dim'>proportional</span></div><pre class='art' style="font-family:'LL EB Garamond Candidate'"> ╲╱╲╱╲╱╲╱ 
+ ╱╲╱╲╱╲╱╲ 
+ ╲╱╲╱╲╱╲╱ 
+ ╱╲╱╲╱╲╱╲ 
+ │      │ </pre></div><div class='cmp'><div class='cmp-label'>Source Serif 4<br><span class='dim'>proportional</span></div><pre class='art' style="font-family:'LL Source Serif Candidate'"> ╲╱╲╱╲╱╲╱ 
+ ╱╲╱╲╱╲╱╲ 
+ ╲╱╲╱╲╱╲╱ 
+ ╱╲╱╲╱╲╱╲ 
+ │      │ </pre></div></div>
+<h3>fixture.bench</h3><div class='cmp-row'><div class='cmp'><div class='cmp-label'>monospace reference<br><span class='dim'>as accepted &mdash; not bundleable</span></div><pre class='art mono'> │▁│▁│▁│ 
+▁│▁▁▁▁▁│▁
+ │     │ 
+ ╵     ╵ </pre></div><div class='cmp'><div class='cmp-label'>Literata<br><span class='dim'>proportional</span></div><pre class='art' style="font-family:'LL Literata Candidate'"> │▁│▁│▁│ 
+▁│▁▁▁▁▁│▁
+ │     │ 
+ ╵     ╵ </pre></div><div class='cmp'><div class='cmp-label'>EB Garamond<br><span class='dim'>proportional</span></div><pre class='art' style="font-family:'LL EB Garamond Candidate'"> │▁│▁│▁│ 
+▁│▁▁▁▁▁│▁
+ │     │ 
+ ╵     ╵ </pre></div><div class='cmp'><div class='cmp-label'>Source Serif 4<br><span class='dim'>proportional</span></div><pre class='art' style="font-family:'LL Source Serif Candidate'"> │▁│▁│▁│ 
+▁│▁▁▁▁▁│▁
+ │     │ 
+ ╵     ╵ </pre></div></div>
+
+<h2>4. Still outstanding after this page</h2>
+<p class="note">Approving a face here settles step 4's face question. It does
+not settle the size: 15px is what the worksheet and the atlas declare and what
+the accepted art was signed off at, 13px is what the product currently paints,
+and the right answer depends on art that does not exist yet. Line height,
+weight, style and letter spacing become part of the runtime contract in step 6.
+Scene captures of the current-root and frozen-legacy viewers are not included
+here &mdash; they show monospace box art and would say nothing about a
+proportional face choice.</p>
+
+</body></html>
