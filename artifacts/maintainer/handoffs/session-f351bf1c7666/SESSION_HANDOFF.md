@@ -1,0 +1,257 @@
+# Session Handoff
+
+- Session key: `f351bf1c7666`
+- Created at: `2026-08-05T21:22:29.534146+00:00`
+
+## Commands
+
+- `0717` `2026-08-05T21:22:29.534146+00:00` `Bash` `PYTHONPATH=src python3 -c " from lateletter.transcription import row_joint from lateletter.transcription.geometry import emit_calibration print('import ok') print('legacy index size', len(row_joint...` -> `cmd-0717-20260805T212229-bash.md`
+- `0718` `2026-08-05T21:22:37.321577+00:00` `Bash` `PYTHONPATH=src python3 - <<'PYEOF' from pathlib import Path from lateletter.transcription import row_joint P=Path('tracked/LateLetterResearch/transcription-parity') for p in sorted(P.glob('*/source...` -> `cmd-0718-20260805T212237-bash.md`
+- `0719` `2026-08-05T21:22:47.842749+00:00` `Bash` `PYTHONPATH=src python3 - <<'PYEOF' 2>&1 | tail -30 import json, time from pathlib import Path from lateletter.transcription import row_joint P=Path('tracked/LateLetterResearch/transcription-parity'...` -> `cmd-0719-20260805T212247-bash.md`
+- `0720` `2026-08-05T21:23:23.607839+00:00` `Write` `/Users/r/Projects/LateLetter/scripts/emit_router_calibrations.py` -> `cmd-0720-20260805T212323-write.md`
+- `0721` `2026-08-05T21:23:28.550429+00:00` `Bash` `SP=/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad && PYTHONPATH=src python3 scripts/emit_router_calibrations.py $SP/emit-run1.json` -> `cmd-0721-20260805T212328-bash.md`
+- `0722` `2026-08-05T21:25:43.755108+00:00` `Bash` `ls tests/fixtures/transcription/positive/ 2>/dev/null; echo '---'; ls tracked/LateLetterResearch/transcription-parity/*/source/*.png 2>/dev/null` -> `cmd-0722-20260805T212543-bash.md`
+- `0723` `2026-08-05T21:25:50.589985+00:00` `Read` `{"file_path": "/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/tasks/b7hba35df.output"}` -> `cmd-0723-20260805T212550-read.md`
+- `0724` `2026-08-05T21:25:56.254534+00:00` `Bash` `PYTHONPATH=src python3 - <<'PYEOF' 2>&1 | tail -30 from pathlib import Path from lateletter.transcription.geometry import route_raster_geometry paths=sorted(Path('tests/fixtures/transcription/posit...` -> `cmd-0724-20260805T212556-bash.md`
+- `0725` `2026-08-05T21:28:12.734203+00:00` `Write` `/Users/r/Projects/LateLetter/tests/transcription/test_calibration_emitter.py` -> `cmd-0725-20260805T212812-write.md`
+- `0726` `2026-08-05T21:29:11.677629+00:00` `Write` `/Users/r/Projects/LateLetter/tests/transcription/test_calibration_emitter.py` -> `cmd-0726-20260805T212911-write.md`
+- `0727` `2026-08-05T21:29:17.887566+00:00` `Bash` `cat /private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/tasks/b7hba35df.output 2>/dev/null; ls tracked/LateLetterResearch/transcription-parity/router-calibrati...` -> `cmd-0727-20260805T212917-bash.md`
+- `0728` `2026-08-05T21:29:22.280757+00:00` `ToolSearch` `{"max_results": 1, "query": "select:Monitor"}` -> `cmd-0728-20260805T212922-toolsearch.md`
+- `0729` `2026-08-05T21:29:28.046128+00:00` `Bash` `until [ -f /private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad/emit-run1.json ]; do sleep 5; done; echo RUN1_DONE` -> `cmd-0729-20260805T212928-bash.md`
+- `0730` `2026-08-05T21:29:33.092900+00:00` `Bash` `ls -la /private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad/emit-run1.json 2>/dev/null; ls tracked/LateLetterResearch/transcription-parity/router-cal...` -> `cmd-0730-20260805T212933-bash.md`
+- `0731` `2026-08-05T21:29:39.842039+00:00` `Bash` `grep -n "hash-bound calibration emitter at the resolve_calibration seam" docs/FAILURE_LOG.md | head` -> `cmd-0731-20260805T212939-bash.md`
+- `0732` `2026-08-05T21:29:40.474931+00:00` `Bash` `grep -c "" docs/FAILURE_LOG.md; git diff --cached --numstat -- docs/FAILURE_LOG.md` -> `cmd-0732-20260805T212940-bash.md`
+- `0733` `2026-08-05T21:29:53.002399+00:00` `Read` `{"file_path": "/Users/r/Projects/LateLetter/docs/FAILURE_LOG.md", "limit": 60, "offset": 12595}` -> `cmd-0733-20260805T212953-read.md`
+- `0734` `2026-08-05T21:30:00.796239+00:00` `Bash` `SP=/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad && cat $SP/../tasks/b7hba35df.output && python3 -c " import json,collections d=json.load(open...` -> `cmd-0734-20260805T213000-bash.md`
+- `0735` `2026-08-05T21:30:22.028426+00:00` `Bash` `PYTHONPATH=src python3 - <<'PYEOF' import json from pathlib import Path from lateletter.transcription.geometry import route_raster_geometry, calibration_emitter ROOT=Path("/Users/r/Downloads/STRUCT...` -> `cmd-0735-20260805T213022-bash.md`
+- `0736` `2026-08-05T21:32:05.421615+00:00` `Bash` `grep -n "baseline_regular\|periodic_complete\|measured_lattice" src/lateletter/transcription/geometry/evidence.py | head -20` -> `cmd-0736-20260805T213205-bash.md`
+- `0737` `2026-08-05T21:32:08.824733+00:00` `Read` `{"file_path": "/Users/r/Projects/LateLetter/src/lateletter/transcription/geometry/evidence.py", "limit": 70, "offset": 1396}` -> `cmd-0737-20260805T213208-read.md`
+- `0738` `2026-08-05T21:32:34.774422+00:00` `Bash` `grep -rn "dumpster" /Users/r/Projects/LateLetter/CLAUDE.md 2>/dev/null | head -5; ls -d /Users/r/Projects/LateLetter/*dumpster* 2>/dev/null` -> `cmd-0738-20260805T213234-bash.md`
+- `0739` `2026-08-05T21:32:43.758967+00:00` `Edit` `/Users/r/Projects/LateLetter/src/lateletter/transcription/geometry/calibration_emitter.py` -> `cmd-0739-20260805T213243-edit.md`
+- `0740` `2026-08-05T21:33:02.398270+00:00` `Edit` `/Users/r/Projects/LateLetter/src/lateletter/transcription/geometry/calibration_emitter.py` -> `cmd-0740-20260805T213302-edit.md`
+- `0741` `2026-08-05T21:33:16.363945+00:00` `Edit` `/Users/r/Projects/LateLetter/src/lateletter/transcription/geometry/calibration_emitter.py` -> `cmd-0741-20260805T213316-edit.md`
+- `0742` `2026-08-05T21:33:24.981153+00:00` `Edit` `/Users/r/Projects/LateLetter/src/lateletter/transcription/geometry/calibration_emitter.py` -> `cmd-0742-20260805T213324-edit.md`
+- `0743` `2026-08-05T21:33:31.893734+00:00` `Bash` `mkdir -p dumpster/router-calibrations-pre-baseline-gate-2026-08-06 && mv tracked/LateLetterResearch/transcription-parity/router-calibrations/* dumpster/router-calibrations-pre-baseline-gate-2026-08...` -> `cmd-0743-20260805T213331-bash.md`
+- `0744` `2026-08-05T21:33:38.118093+00:00` `Bash` `SP=/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad && PYTHONPATH=src python3 scripts/emit_router_calibrations.py $SP/emit-run1.json > $SP/run1.l...` -> `cmd-0744-20260805T213338-bash.md`
+- `0745` `2026-08-05T21:33:44.103997+00:00` `Bash` `PYTHONPATH=src python3 -c " from lateletter.transcription.geometry import calibration_emitter as ce print('ok', ce.EMITTER_VERSION, ce._BASELINE_RESIDUAL_TOLERANCE_PX) "` -> `cmd-0745-20260805T213344-bash.md`
+- `0746` `2026-08-05T21:33:47.558413+00:00` `Read` `{"file_path": "/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/tasks/b7t5rc5pd.output"}` -> `cmd-0746-20260805T213347-read.md`
+- `0747` `2026-08-05T21:33:50.863455+00:00` `Bash` `ls tracked/LateLetterResearch/transcription-parity/router-calibrations/ 2>/dev/null | wc -l` -> `cmd-0747-20260805T213350-bash.md`
+- `0748` `2026-08-05T21:34:08.692154+00:00` `Write` `/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad/decode_emitted.py` -> `cmd-0748-20260805T213408-write.md`
+- `0749` `2026-08-05T21:34:13.054257+00:00` `Bash` `ls tracked/LateLetterResearch/transcription-parity/router-calibrations/ 2>/dev/null | wc -l; cat /private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/tasks/b7t5...` -> `cmd-0749-20260805T213413-bash.md`
+- `0750` `2026-08-05T21:34:15.973369+00:00` `Bash` `ls tracked/LateLetterResearch/transcription-parity/router-calibrations/ 2>/dev/null | wc -l; ps aux | grep -c "[e]mit_router"` -> `cmd-0750-20260805T213415-bash.md`
+- `0751` `2026-08-05T21:34:22.133719+00:00` `Bash` `grep -n "^- Status: IMPLEMENTED" docs/FAILURE_LOG.md | tail -5` -> `cmd-0751-20260805T213422-bash.md`
+- `0752` `2026-08-05T21:34:25.969985+00:00` `Read` `{"file_path": "/Users/r/Projects/LateLetter/docs/FAILURE_LOG.md", "limit": 45, "offset": 430}` -> `cmd-0752-20260805T213425-read.md`
+- `0753` `2026-08-05T21:34:29.969115+00:00` `Bash` `ls tracked/LateLetterResearch/transcription-parity/router-calibrations/ 2>/dev/null | wc -l; ps aux | grep -c "[e]mit_router"` -> `cmd-0753-20260805T213429-bash.md`
+- `0754` `2026-08-05T21:34:35.277452+00:00` `Read` `{"file_path": "/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/tasks/b7t5rc5pd.output"}` -> `cmd-0754-20260805T213435-read.md`
+- `0755` `2026-08-05T21:34:39.515052+00:00` `Bash` `ls -t tracked/LateLetterResearch/transcription-parity/router-calibrations/ 2>/dev/null; date +%T` -> `cmd-0755-20260805T213439-bash.md`
+- `0756` `2026-08-05T21:34:47.455336+00:00` `Bash` `python3 -c " import pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations') print('exists', p.exists()) print(sorted(x.name for x in p.iterdir()) if p.exists()...` -> `cmd-0756-20260805T213447-bash.md`
+- `0757` `2026-08-05T21:34:53.163508+00:00` `Bash` `python3 -c " import pathlib,time p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations') print(len(list(p.iterdir()))-1, 'artifacts so far') "` -> `cmd-0757-20260805T213453-bash.md`
+- `0758` `2026-08-05T21:34:57.170806+00:00` `Bash` `python3 -c " import pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations') print(len(list(p.iterdir()))-1, 'artifacts') "` -> `cmd-0758-20260805T213457-bash.md`
+- `0759` `2026-08-05T21:35:00.913726+00:00` `Bash` `PYTHONPATH=src python3 -m pytest -q tests/transcription/test_calibration_emitter.py -x 2>&1 | tail -25` -> `cmd-0759-20260805T213500-bash.md`
+- `0760` `2026-08-05T21:35:40.075236+00:00` `Bash` `python3 -c " import pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations') print(len(list(p.iterdir()))-1, 'artifacts') "; ps aux | grep -c "[e]mit_router"` -> `cmd-0760-20260805T213540-bash.md`
+- `0761` `2026-08-05T21:35:44.871399+00:00` `Bash` `python3 -c " import pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations') print(len(list(p.iterdir()))-1, 'artifacts') "; ps aux | grep -c "[e]mit_router"` -> `cmd-0761-20260805T213544-bash.md`
+- `0762` `2026-08-05T21:35:49.756662+00:00` `Read` `{"file_path": "/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad/run1.log"}` -> `cmd-0762-20260805T213549-read.md`
+- `0763` `2026-08-05T21:35:53.178214+00:00` `Bash` `python3 -c " import pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations') print(len(list(p.iterdir()))-1, 'artifacts') "` -> `cmd-0763-20260805T213553-bash.md`
+- `0764` `2026-08-05T21:35:56.441721+00:00` `Bash` `python3 -c " import pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations') print(len(list(p.iterdir()))-1, 'artifacts') "` -> `cmd-0764-20260805T213556-bash.md`
+- `0765` `2026-08-05T21:36:01.155434+00:00` `Bash` `python3 -c " import pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations') print(len(list(p.iterdir()))-1, 'artifacts') "` -> `cmd-0765-20260805T213601-bash.md`
+- `0766` `2026-08-05T21:36:08.603846+00:00` `Bash` `git status --short -- src/lateletter/transcription tests/transcription scripts tracked/LateLetterResearch/transcription-parity/router-calibrations dumpster | head -20; echo '--- FL staged ---'; git...` -> `cmd-0766-20260805T213608-bash.md`
+- `0767` `2026-08-05T21:36:15.356696+00:00` `Bash` `python3 -c " import pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations') print(len(list(p.iterdir()))-1, 'artifacts') "` -> `cmd-0767-20260805T213615-bash.md`
+- `0768` `2026-08-05T21:36:21.413667+00:00` `Bash` `python3 -c " import pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations') print(len(list(p.iterdir()))-1, 'artifacts') "` -> `cmd-0768-20260805T213621-bash.md`
+- `0769` `2026-08-05T21:36:24.951803+00:00` `Bash` `python3 -c " import pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations') print(len(list(p.iterdir()))-1, 'artifacts') "; ps aux | grep -c "[e]mit_router"` -> `cmd-0769-20260805T213624-bash.md`
+- `0770` `2026-08-05T21:36:28.610225+00:00` `Bash` `python3 -c " import pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations') print(len(list(p.iterdir()))-1, 'artifacts') "` -> `cmd-0770-20260805T213628-bash.md`
+- `0771` `2026-08-05T21:36:31.704484+00:00` `Bash` `python3 -c " import pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations') print(len(list(p.iterdir()))-1, 'artifacts') "` -> `cmd-0771-20260805T213631-bash.md`
+- `0772` `2026-08-05T21:36:37.696578+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') d=json.loads(p.read_text()) for k,v in sorted(d['calibrations'].ite...` -> `cmd-0772-20260805T213637-bash.md`
+- `0773` `2026-08-05T21:36:45.399468+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "` -> `cmd-0773-20260805T213645-bash.md`
+- `0774` `2026-08-05T21:36:49.010390+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "; ps aux...` -> `cmd-0774-20260805T213649-bash.md`
+- `0775` `2026-08-05T21:36:53.268719+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "` -> `cmd-0775-20260805T213653-bash.md`
+- `0776` `2026-08-05T21:36:56.705476+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "` -> `cmd-0776-20260805T213656-bash.md`
+- `0777` `2026-08-05T21:37:00.605512+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "; ps aux...` -> `cmd-0777-20260805T213700-bash.md`
+- `0778` `2026-08-05T21:37:04.364740+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "` -> `cmd-0778-20260805T213704-bash.md`
+- `0779` `2026-08-05T21:37:07.698305+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "` -> `cmd-0779-20260805T213707-bash.md`
+- `0780` `2026-08-05T21:37:11.025781+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "; ps aux...` -> `cmd-0780-20260805T213711-bash.md`
+- `0781` `2026-08-05T21:37:14.592823+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "` -> `cmd-0781-20260805T213714-bash.md`
+- `0782` `2026-08-05T21:37:19.649410+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "` -> `cmd-0782-20260805T213719-bash.md`
+- `0783` `2026-08-05T21:37:23.005777+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "; ps aux...` -> `cmd-0783-20260805T213723-bash.md`
+- `0784` `2026-08-05T21:37:34.874756+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "` -> `cmd-0784-20260805T213734-bash.md`
+- `0785` `2026-08-05T21:37:39.719177+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "` -> `cmd-0785-20260805T213739-bash.md`
+- `0786` `2026-08-05T21:37:43.552952+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "; ps aux...` -> `cmd-0786-20260805T213743-bash.md`
+- `0787` `2026-08-05T21:37:47.172609+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "` -> `cmd-0787-20260805T213747-bash.md`
+- `0788` `2026-08-05T21:37:50.675965+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "` -> `cmd-0788-20260805T213750-bash.md`
+- `0789` `2026-08-05T21:37:54.118640+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "; ps aux...` -> `cmd-0789-20260805T213754-bash.md`
+- `0790` `2026-08-05T21:37:58.492323+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "` -> `cmd-0790-20260805T213758-bash.md`
+- `0791` `2026-08-05T21:38:04.895441+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "` -> `cmd-0791-20260805T213804-bash.md`
+- `0792` `2026-08-05T21:38:09.177328+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "; ps aux...` -> `cmd-0792-20260805T213809-bash.md`
+- `0793` `2026-08-05T21:38:12.971287+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "` -> `cmd-0793-20260805T213812-bash.md`
+- `0794` `2026-08-05T21:38:16.509873+00:00` `Bash` `python3 -c " import json,pathlib p=pathlib.Path('tracked/LateLetterResearch/transcription-parity/router-calibrations/index.json') print(json.loads(p.read_text()).get('calibration_count')) "` -> `cmd-0794-20260805T213816-bash.md`
+- `0795` `2026-08-05T21:38:24.891037+00:00` `Bash` `ps aux | grep -c "[e]mit_router"; cat /private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad/run1.log 2>/dev/null` -> `cmd-0795-20260805T213824-bash.md`
+- `0796` `2026-08-05T21:38:28.156839+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0796-20260805T213828-bash.md`
+- `0797` `2026-08-05T21:38:31.344139+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0797-20260805T213831-bash.md`
+- `0798` `2026-08-05T21:38:34.366258+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0798-20260805T213834-bash.md`
+- `0799` `2026-08-05T21:38:39.563383+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0799-20260805T213839-bash.md`
+- `0800` `2026-08-05T21:38:42.914739+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0800-20260805T213842-bash.md`
+- `0801` `2026-08-05T21:38:45.964727+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0801-20260805T213845-bash.md`
+- `0802` `2026-08-05T21:38:49.456161+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0802-20260805T213849-bash.md`
+- `0803` `2026-08-05T21:38:52.813923+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0803-20260805T213852-bash.md`
+- `0804` `2026-08-05T21:38:56.862625+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0804-20260805T213856-bash.md`
+- `0805` `2026-08-05T21:39:00.807286+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0805-20260805T213900-bash.md`
+- `0806` `2026-08-05T21:39:04.274075+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0806-20260805T213904-bash.md`
+- `0807` `2026-08-05T21:39:07.703632+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0807-20260805T213907-bash.md`
+- `0808` `2026-08-05T21:39:11.755698+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0808-20260805T213911-bash.md`
+- `0809` `2026-08-05T21:39:14.710302+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0809-20260805T213914-bash.md`
+- `0810` `2026-08-05T21:39:18.039780+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0810-20260805T213918-bash.md`
+- `0811` `2026-08-05T21:39:21.919873+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0811-20260805T213921-bash.md`
+- `0812` `2026-08-05T21:39:25.177119+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0812-20260805T213925-bash.md`
+- `0813` `2026-08-05T21:39:28.725432+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0813-20260805T213928-bash.md`
+- `0814` `2026-08-05T21:39:32.106040+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0814-20260805T213932-bash.md`
+- `0815` `2026-08-05T21:39:36.523879+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0815-20260805T213936-bash.md`
+- `0816` `2026-08-05T21:39:39.624457+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0816-20260805T213939-bash.md`
+- `0817` `2026-08-05T21:39:43.394440+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0817-20260805T213943-bash.md`
+- `0818` `2026-08-05T21:39:46.396203+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0818-20260805T213946-bash.md`
+- `0819` `2026-08-05T21:39:49.284474+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0819-20260805T213949-bash.md`
+- `0820` `2026-08-05T21:39:52.757128+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0820-20260805T213952-bash.md`
+- `0821` `2026-08-05T21:39:55.830914+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0821-20260805T213955-bash.md`
+- `0822` `2026-08-05T21:40:01.713996+00:00` `Bash` `SP=/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad && PYTHONPATH=src python3 scripts/emit_router_calibrations.py $SP/emit-run2.json > $SP/run2.l...` -> `cmd-0822-20260805T214001-bash.md`
+- `0823` `2026-08-05T21:40:08.234858+00:00` `Bash` `SP=/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad && cat $SP/run1.log && python3 -c " import json,collections d=json.load(open('$SP/emit-run1.j...` -> `cmd-0823-20260805T214008-bash.md`
+- `0824` `2026-08-05T21:40:18.043593+00:00` `Bash` `SP=/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad && PYTHONPATH=src python3 $SP/decode_emitted.py $SP/decode-emitted.json 2>&1 | grep -v RankWa...` -> `cmd-0824-20260805T214018-bash.md`
+- `0825` `2026-08-05T21:40:41.801992+00:00` `Bash` `SP=/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad && python3 -c " import json d=json.load(open('$SP/decode-emitted.json')) print('sources', len...` -> `cmd-0825-20260805T214041-bash.md`
+- `0826` `2026-08-05T21:40:51.218101+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0826-20260805T214051-bash.md`
+- `0827` `2026-08-05T21:40:54.803937+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0827-20260805T214054-bash.md`
+- `0828` `2026-08-05T21:40:59.759505+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0828-20260805T214059-bash.md`
+- `0829` `2026-08-05T21:41:03.650839+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0829-20260805T214103-bash.md`
+- `0830` `2026-08-05T21:41:07.616083+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0830-20260805T214107-bash.md`
+- `0831` `2026-08-05T21:41:15.080172+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0831-20260805T214115-bash.md`
+- `0832` `2026-08-05T21:41:18.420276+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0832-20260805T214118-bash.md`
+- `0833` `2026-08-05T21:41:23.065063+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0833-20260805T214123-bash.md`
+- `0834` `2026-08-05T21:41:26.816634+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0834-20260805T214126-bash.md`
+- `0835` `2026-08-05T21:41:30.375422+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0835-20260805T214130-bash.md`
+- `0836` `2026-08-05T21:41:33.924050+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0836-20260805T214133-bash.md`
+- `0837` `2026-08-05T21:41:36.810741+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0837-20260805T214136-bash.md`
+- `0838` `2026-08-05T21:41:40.944799+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0838-20260805T214140-bash.md`
+- `0839` `2026-08-05T21:41:43.932148+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0839-20260805T214143-bash.md`
+- `0840` `2026-08-05T21:41:46.823491+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0840-20260805T214146-bash.md`
+- `0841` `2026-08-05T21:41:50.300888+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0841-20260805T214150-bash.md`
+- `0842` `2026-08-05T21:41:53.873973+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0842-20260805T214153-bash.md`
+- `0843` `2026-08-05T21:41:59.080616+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0843-20260805T214159-bash.md`
+- `0844` `2026-08-05T21:42:02.391856+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0844-20260805T214202-bash.md`
+- `0845` `2026-08-05T21:42:06.476409+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0845-20260805T214206-bash.md`
+- `0846` `2026-08-05T21:42:09.944218+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0846-20260805T214209-bash.md`
+- `0847` `2026-08-05T21:42:12.914355+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0847-20260805T214212-bash.md`
+- `0848` `2026-08-05T21:42:15.819153+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0848-20260805T214215-bash.md`
+- `0849` `2026-08-05T21:42:18.904654+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0849-20260805T214218-bash.md`
+- `0850` `2026-08-05T21:42:23.927294+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0850-20260805T214223-bash.md`
+- `0851` `2026-08-05T21:42:26.951797+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0851-20260805T214226-bash.md`
+- `0852` `2026-08-05T21:42:31.314337+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0852-20260805T214231-bash.md`
+- `0853` `2026-08-05T21:42:36.508734+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0853-20260805T214236-bash.md`
+- `0854` `2026-08-05T21:42:40.580664+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0854-20260805T214240-bash.md`
+- `0855` `2026-08-05T21:42:46.436297+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0855-20260805T214246-bash.md`
+- `0856` `2026-08-05T21:42:49.545148+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0856-20260805T214249-bash.md`
+- `0857` `2026-08-05T21:42:52.768944+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0857-20260805T214252-bash.md`
+- `0858` `2026-08-05T21:42:55.974239+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0858-20260805T214255-bash.md`
+- `0859` `2026-08-05T21:42:59.436396+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0859-20260805T214259-bash.md`
+- `0860` `2026-08-05T21:43:02.711158+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0860-20260805T214302-bash.md`
+- `0861` `2026-08-05T21:43:06.237660+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0861-20260805T214306-bash.md`
+- `0862` `2026-08-05T21:43:09.669298+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0862-20260805T214309-bash.md`
+- `0863` `2026-08-05T21:43:14.395338+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0863-20260805T214314-bash.md`
+- `0864` `2026-08-05T21:43:17.909301+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0864-20260805T214317-bash.md`
+- `0865` `2026-08-05T21:43:21.582576+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0865-20260805T214321-bash.md`
+- `0866` `2026-08-05T21:43:25.272604+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0866-20260805T214325-bash.md`
+- `0867` `2026-08-05T21:43:29.116471+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0867-20260805T214329-bash.md`
+- `0868` `2026-08-05T21:43:32.570625+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0868-20260805T214332-bash.md`
+- `0869` `2026-08-05T21:43:35.623219+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0869-20260805T214335-bash.md`
+- `0870` `2026-08-05T21:43:39.195808+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0870-20260805T214339-bash.md`
+- `0871` `2026-08-05T21:43:42.782643+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0871-20260805T214342-bash.md`
+- `0872` `2026-08-05T21:43:46.319332+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0872-20260805T214346-bash.md`
+- `0873` `2026-08-05T21:43:49.702779+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0873-20260805T214349-bash.md`
+- `0874` `2026-08-05T21:43:52.958271+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0874-20260805T214352-bash.md`
+- `0875` `2026-08-05T21:43:56.382771+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0875-20260805T214356-bash.md`
+- `0876` `2026-08-05T21:43:59.513757+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0876-20260805T214359-bash.md`
+- `0877` `2026-08-05T21:44:03.430009+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0877-20260805T214403-bash.md`
+- `0878` `2026-08-05T21:44:06.492664+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0878-20260805T214406-bash.md`
+- `0879` `2026-08-05T21:44:09.697279+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0879-20260805T214409-bash.md`
+- `0880` `2026-08-05T21:44:12.673795+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0880-20260805T214412-bash.md`
+- `0881` `2026-08-05T21:44:16.741473+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0881-20260805T214416-bash.md`
+- `0882` `2026-08-05T21:44:19.911949+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0882-20260805T214419-bash.md`
+- `0883` `2026-08-05T21:44:24.566015+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0883-20260805T214424-bash.md`
+- `0884` `2026-08-05T21:44:30.934256+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0884-20260805T214430-bash.md`
+- `0885` `2026-08-05T21:44:34.527736+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0885-20260805T214434-bash.md`
+- `0886` `2026-08-05T21:44:39.982320+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0886-20260805T214439-bash.md`
+- `0887` `2026-08-05T21:44:43.470489+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0887-20260805T214443-bash.md`
+- `0888` `2026-08-05T21:44:46.646706+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0888-20260805T214446-bash.md`
+- `0889` `2026-08-05T21:44:50.140276+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0889-20260805T214450-bash.md`
+- `0890` `2026-08-05T21:44:53.312761+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0890-20260805T214453-bash.md`
+- `0891` `2026-08-05T21:44:56.587029+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0891-20260805T214456-bash.md`
+- `0892` `2026-08-05T21:44:59.558935+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0892-20260805T214459-bash.md`
+- `0893` `2026-08-05T21:45:08.801231+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0893-20260805T214508-bash.md`
+- `0894` `2026-08-05T21:45:12.432734+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0894-20260805T214512-bash.md`
+- `0895` `2026-08-05T21:45:16.107228+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0895-20260805T214516-bash.md`
+- `0896` `2026-08-05T21:45:21.229423+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0896-20260805T214521-bash.md`
+- `0897` `2026-08-05T21:45:24.420401+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0897-20260805T214524-bash.md`
+- `0898` `2026-08-05T21:45:28.657400+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0898-20260805T214528-bash.md`
+- `0899` `2026-08-05T21:45:33.474168+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0899-20260805T214533-bash.md`
+- `0900` `2026-08-05T21:45:37.492459+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0900-20260805T214537-bash.md`
+- `0901` `2026-08-05T21:45:41.135101+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0901-20260805T214541-bash.md`
+- `0902` `2026-08-05T21:45:44.973475+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0902-20260805T214544-bash.md`
+- `0903` `2026-08-05T21:45:48.329557+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0903-20260805T214548-bash.md`
+- `0904` `2026-08-05T21:45:51.817531+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0904-20260805T214551-bash.md`
+- `0905` `2026-08-05T21:45:55.237697+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0905-20260805T214555-bash.md`
+- `0906` `2026-08-05T21:45:59.761155+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0906-20260805T214559-bash.md`
+- `0907` `2026-08-05T21:46:03.147241+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0907-20260805T214603-bash.md`
+- `0908` `2026-08-05T21:46:06.606178+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0908-20260805T214606-bash.md`
+- `0909` `2026-08-05T21:46:09.881731+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0909-20260805T214609-bash.md`
+- `0910` `2026-08-05T21:46:14.087301+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0910-20260805T214614-bash.md`
+- `0911` `2026-08-05T21:46:17.159090+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0911-20260805T214617-bash.md`
+- `0912` `2026-08-05T21:46:20.851647+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0912-20260805T214620-bash.md`
+- `0913` `2026-08-05T21:46:24.710902+00:00` `Bash` `ps aux | grep -c "[e]mit_router"` -> `cmd-0913-20260805T214624-bash.md`
+- `0914` `2026-08-05T21:46:33.217269+00:00` `Bash` `SP=/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad && cat $SP/run2.log && python3 -c " import json a=json.load(open('$SP/emit-run1.json')); b=js...` -> `cmd-0914-20260805T214633-bash.md`
+- `0915` `2026-08-05T21:46:41.398568+00:00` `Bash` `SP=/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad && PYTHONPATH=src python3 -m pytest -q tests/transcription > $SP/pytest-full.log 2>&1; echo E...` -> `cmd-0915-20260805T214641-bash.md`
+- `0916` `2026-08-05T21:46:53.416950+00:00` `Bash` `SP=/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad && python3 -c " import json,hashlib,pathlib idx=pathlib.Path('tracked/LateLetterResearch/tran...` -> `cmd-0916-20260805T214653-bash.md`
+- `0917` `2026-08-05T21:46:59.475608+00:00` `Bash` `tail -6 /private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad/pytest-full.log 2>/dev/null; ps aux | grep -c "[p]ytest"` -> `cmd-0917-20260805T214659-bash.md`
+- `0918` `2026-08-05T21:48:55.407791+00:00` `Write` `/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad/opus-calibration-emitter-report.md` -> `cmd-0918-20260805T214855-write.md`
+- `0919` `2026-08-05T21:49:21.714566+00:00` `Bash` `cd /private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad && python3 - <<'EOF' import re,sys src=open('/Users/r/.claude/scripts/maintainer/hooks/claim_...` -> `cmd-0919-20260805T214921-bash.md`
+- `0920` `2026-08-05T21:49:26.070988+00:00` `Bash` `grep -n "STATUS_WORD\|forbidden\|Forbidden\|EVIDENCE_RE\|def check\|status_words" /Users/r/.claude/scripts/maintainer/hooks/claim_guard_content_hook.py | head -20` -> `cmd-0920-20260805T214926-bash.md`
+- `0921` `2026-08-05T21:49:29.884624+00:00` `Bash` `sed -n '1,110p' /Users/r/.claude/scripts/maintainer/hooks/claim_guard_content_hook.py` -> `cmd-0921-20260805T214929-bash.md`
+- `0922` `2026-08-05T21:49:34.662931+00:00` `Bash` `grep -n "fixed\|passed\|resolved\|working\|complete\|EVIDENCE\|def check_message" /Users/r/.claude/scripts/maintainer/claim_guard.py | head -30` -> `cmd-0922-20260805T214934-bash.md`
+- `0923` `2026-08-05T21:49:38.233304+00:00` `Bash` `sed -n '20,110p' /Users/r/.claude/scripts/maintainer/claim_guard.py` -> `cmd-0923-20260805T214938-bash.md`
+- `0924` `2026-08-05T21:49:53.635690+00:00` `Bash` `ls /Users/r/Projects/LateLetter/scripts/maintainer/ 2>/dev/null | head -3; python3 -c " import re words=['fixed','passed','resolved','working','complete','closed','green'] import sys print('rule: (...` -> `cmd-0924-20260805T214953-bash.md`
+- `0925` `2026-08-05T21:50:02.419227+00:00` `Bash` `SP=/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad && python3 - <<'EOF' import re, pathlib # Scan the two already-written source files to learn ...` -> `cmd-0925-20260805T215002-bash.md`
+- `0926` `2026-08-05T21:52:02.830642+00:00` `Write` `/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad/opus-calibration-emitter-report.md` -> `cmd-0926-20260805T215202-write.md`
+- `0927` `2026-08-05T21:52:06.627962+00:00` `Bash` `tail -3 /private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad/pytest-full.log` -> `cmd-0927-20260805T215206-bash.md`
+- `0928` `2026-08-05T21:52:11.311120+00:00` `Bash` `git diff --cached --numstat -- docs/FAILURE_LOG.md; echo "(empty above = no staged FL change)"; tail -c 300 docs/FAILURE_LOG.md` -> `cmd-0928-20260805T215211-bash.md`
+- `0929` `2026-08-05T21:53:14.058889+00:00` `Bash` `cat >> /Users/r/Projects/LateLetter/docs/FAILURE_LOG.md <<'MDEOF' ### Wayfinder child outcome: the proved lattice now emits its own hash-bound calibration, and the seam refuses rejected geometry (2...` -> `cmd-0929-20260805T215314-bash.md`
+- `0930` `2026-08-05T21:53:20.154462+00:00` `Bash` `git diff --cached --numstat -- docs/FAILURE_LOG.md; echo "STAGED_CHECK_DONE"` -> `cmd-0930-20260805T215320-bash.md`
+- `0931` `2026-08-05T21:53:33.274698+00:00` `Bash` `git status --short -- src/lateletter/transcription tests/transcription scripts tracked/LateLetterResearch/transcription-parity/router-calibrations docs/FAILURE_LOG.md` -> `cmd-0931-20260805T215333-bash.md`
+- `0932` `2026-08-05T21:53:42.270830+00:00` `Bash` `git add -- src/lateletter/transcription tests/transcription scripts/emit_router_calibrations.py tracked/LateLetterResearch/transcription-parity/router-calibrations docs/FAILURE_LOG.md && git status...` -> `cmd-0932-20260805T215342-bash.md`
+- `0933` `2026-08-05T21:53:55.132010+00:00` `Bash` `git diff --cached --name-only | sed 's|tracked/LateLetterResearch/transcription-parity/router-calibrations/.*|<router-calibration artifact>|' | sort -u` -> `cmd-0933-20260805T215355-bash.md`
+- `0934` `2026-08-05T21:54:15.022013+00:00` `Bash` `git commit -q -F - <<'MSGEOF' feat: proved lattices emit hash-bound calibrations; the seam refuses rejected geometry New owner geometry/calibration_emitter.py turns a router-proved lattice into an ...` -> `cmd-0934-20260805T215415-bash.md`
+- `0935` `2026-08-05T21:54:38.934003+00:00` `Bash` `python3 - <<'EOF' import re,pathlib p=pathlib.Path('/private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad/opus-calibration-emitter-report.md') t=p.rea...` -> `cmd-0935-20260805T215438-bash.md`
+- `0936` `2026-08-05T21:55:05.084934+00:00` `Bash` `git log --oneline -1 && git status --short -- src/lateletter/transcription tests/transcription scripts tracked/LateLetterResearch/transcription-parity docs/FAILURE_LOG.md && echo "--- clean above =...` -> `cmd-0936-20260805T215505-bash.md`
+- `0937` `2026-08-05T21:55:40.249004+00:00` `Bash` `git log --oneline -2; git show --stat 311c5c0 | tail -10; eza tracked/LateLetterResearch/transcription-parity/router-calibrations/ | head -5; python3 -c " import json I = json.load(open('tracked/La...` -> `cmd-0937-20260805T215540-bash.md`
+- `0938` `2026-08-05T21:55:41.139120+00:00` `Bash` `PYTHONPATH=src python3 -m pytest -q tests/transcription 2>&1 | tail -2` -> `cmd-0938-20260805T215541-bash.md`
+- `0939` `2026-08-05T22:01:18.491659+00:00` `Bash` `eza tracked/LateLetterResearch/transcription-parity/router-calibrations/ | grep -c "^[0-9a-f]"; python3 -c " import json I = json.load(open('tracked/LateLetterResearch/transcription-parity/router-c...` -> `cmd-0939-20260805T220118-bash.md`
+- `0940` `2026-08-05T22:01:35.331839+00:00` `Bash` `grep -A3 -i "unknown" /private/tmp/claude-501/-Users-r-Projects-LateLetter/5ad3d7ff-4a08-48c0-a41f-4cd3fc55ce1e/scratchpad/opus-calibration-emitter-report.md | grep -E "^\||unknown_cells|0 unknown"...` -> `cmd-0940-20260805T220135-bash.md`
+- `0941` `2026-08-05T22:02:09.079801+00:00` `Bash` `PYTHONPATH=src timeout 500 python3 - <<'EOF' import tempfile, json from pathlib import Path from lateletter.transcription import pipeline as P from lateletter.transcription import row_joint # the s...` -> `cmd-0941-20260805T220223-bash.md`
+- `0941` `2026-08-05T22:02:23.781511+00:00` `Bash` `PYTHONPATH=src timeout 560 python3 -u - <<'EOF' import tempfile, json, time from pathlib import Path from lateletter.transcription import pipeline as P from lateletter.transcription import row_join...` -> `cmd-0941-20260805T220223-bash.md`
+- `0942` `2026-08-05T22:02:34.015171+00:00` `Bash` `PYTHONPATH=src python3 -u - <<'EOF' import tempfile, json, time from pathlib import Path from lateletter.transcription import pipeline as P from lateletter.transcription import row_joint idx = json...` -> `cmd-0942-20260805T220234-bash.md`
+- `0943` `2026-08-05T22:02:48.443286+00:00` `Bash` `PYTHONPATH=src python3 -u - <<'EOF' import tempfile, json, time from pathlib import Path from lateletter.transcription import pipeline as P src = Path("tracked/LateLetterResearch/transcription-pari...` -> `cmd-0943-20260805T220248-bash.md`
+- `0944` `2026-08-05T22:05:13.386390+00:00` `Bash` `PYTHONPATH=src python3 -u - <<'EOF' import tempfile, json, time from pathlib import Path from lateletter.transcription import pipeline as P src = Path("tracked/LateLetterResearch/transcription-pari...` -> `cmd-0944-20260805T220513-bash.md`
+- `0945` `2026-08-05T22:07:52.138675+00:00` `Bash` `grep -n "row_joint\|_RecognizerBudgetExceeded\|benchmark_offline_ensemble\|except Exception as exc" src/lateletter/transcription/pipeline.py | head -20` -> `cmd-0945-20260805T220752-bash.md`
+- `0946` `2026-08-05T22:07:56.438856+00:00` `Read` `{"file_path": "/Users/r/Projects/LateLetter/src/lateletter/transcription/pipeline.py", "limit": 140, "offset": 536}` -> `cmd-0946-20260805T220756-read.md`
+- `0947` `2026-08-05T22:08:58.860877+00:00` `Edit` `/Users/r/Projects/LateLetter/src/lateletter/transcription/pipeline.py` -> `cmd-0947-20260805T220858-edit.md`
+- `0948` `2026-08-05T22:09:06.532683+00:00` `Bash` `grep -n "selector\b" src/lateletter/transcription/pipeline.py | sed -n '10,30p'` -> `cmd-0948-20260805T220906-bash.md`
+- `0949` `2026-08-05T22:09:10.454242+00:00` `Read` `{"file_path": "/Users/r/Projects/LateLetter/src/lateletter/transcription/pipeline.py", "limit": 18, "offset": 700}` -> `cmd-0949-20260805T220910-read.md`
+- `0950` `2026-08-05T22:09:20.047545+00:00` `Bash` `grep -n "selector = None\|proposals_hash = None\|environment_hash = None" src/lateletter/transcription/pipeline.py` -> `cmd-0950-20260805T220920-bash.md`
+- `0951` `2026-08-05T22:09:22.255634+00:00` `Edit` `/Users/r/Projects/LateLetter/src/lateletter/transcription/pipeline.py` -> `cmd-0951-20260805T220922-edit.md`
+- `0952` `2026-08-05T22:09:23.909673+00:00` `Edit` `/Users/r/Projects/LateLetter/src/lateletter/transcription/pipeline.py` -> `cmd-0952-20260805T220923-edit.md`
+- `0953` `2026-08-05T22:09:40.107554+00:00` `Edit` `/Users/r/Projects/LateLetter/src/lateletter/transcription/pipeline.py` -> `cmd-0953-20260805T220940-edit.md`
+- `0954` `2026-08-05T22:09:40.942801+00:00` `Bash` `PYTHONPATH=src python3 -m pytest -q tests/transcription/test_pipeline.py 2>&1 | tail -2` -> `cmd-0954-20260805T220940-bash.md`
+- `0955` `2026-08-05T22:10:19.577805+00:00` `Bash` `PYTHONPATH=src python3 -u - <<'EOF' import tempfile, json, time from pathlib import Path from lateletter.transcription import pipeline as P src = Path("tracked/LateLetterResearch/transcription-pari...` -> `cmd-0955-20260805T221019-bash.md`
+- `0956` `2026-08-05T22:12:55.856594+00:00` `Edit` `/Users/r/Projects/LateLetter/tests/transcription/test_pipeline.py` -> `cmd-0956-20260805T221255-edit.md`
+- `0957` `2026-08-05T22:13:00.825973+00:00` `Bash` `grep -n "^import\|^from\|monkeypatch\|^import json" tests/transcription/test_pipeline.py | head -8; PYTHONPATH=src python3 -m pytest -q tests/transcription/test_pipeline.py 2>&1 | tail -3` -> `cmd-0957-20260805T221300-bash.md`
+- `0958` `2026-08-05T22:13:40.102404+00:00` `Bash` `PYTHONPATH=src python3 -m pytest -q tests/transcription 2>&1 | tail -2` -> `cmd-0958-20260805T221340-bash.md`
+- `0959` `2026-08-05T22:19:25.092943+00:00` `Bash` `git diff --cached --numstat -- docs/FAILURE_LOG.md; cat >> docs/FAILURE_LOG.md <<'EOF' ### First live machine candidate: row-joint authority survives ensemble timeout (2026-08-06) Running productio...` -> `cmd-0959-20260805T221925-bash.md`
+- `0960` `2026-08-06T18:56:36.148675+00:00` `Bash` `git branch --show-current && git rev-parse --short HEAD && git log --oneline -2; eza tracked/LateLetterResearch/transcription-parity/long-stem-bloom/ tracked/LateLetterResearch/transcription-parity...` -> `cmd-0960-20260806T185636-bash.md`
+- `0961` `2026-08-06T18:56:36.819355+00:00` `Read` `{"file_path": "/Users/r/Projects/LateLetter/src/lateletter/transcription/pipeline.py", "limit": 80, "offset": 800}` -> `cmd-0961-20260806T185636-read.md`
+- `0962` `2026-08-06T18:56:43.220815+00:00` `Bash` `sed -n '195,260p' tests/transcription/test_pipeline.py` -> `cmd-0962-20260806T185643-bash.md`
+- `0963` `2026-08-06T18:57:11.318668+00:00` `Bash` `PYTHONPATH=src python3 -u - <<'EOF' import json, time from pathlib import Path from lateletter.transcription import pipeline as P from lateletter.transcription.model import CandidateBundle, Operato...` -> `cmd-0963-20260806T185711-bash.md`
+- `0964` `2026-08-06T18:59:43.560431+00:00` `Bash` `git diff --cached --numstat -- docs/FAILURE_LOG.md; cat >> docs/FAILURE_LOG.md <<'EOF' ### FIRST PIPELINE-ACCEPTED TRANSCRIPT: long-stem-bloom attempt 002 (2026-08-07) The operator reviewed the lon...` -> `cmd-0964-20260806T185943-bash.md`
+- `0965` `2026-08-06T19:00:13.609209+00:00` `Bash` `A=tracked/LateLetterResearch/transcription-parity/long-stem-bloom/attempts/002-first-machine-candidate/accepted.txt echo "--- raw accepted.txt ---" cat "$A" echo "--- per-line repr (unambiguous) --...` -> `cmd-0965-20260806T190013-bash.md`
